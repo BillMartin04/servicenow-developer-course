@@ -2,6 +2,13 @@
 
 _Part of Module 4 · Script Includes & GlideAjax · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
+
+**Estimated time:** 13 min
+
+## What you'll learn
+
+By the end of this lesson you'll be able to create reusable server-side classes.
+
 ## Watch
 
 {% embed url="https://www.youtube.com/watch?v=yu75ZE_qFUY" %}
@@ -34,3 +41,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[Script Include & GlideAjax →](01-glideajax.md)

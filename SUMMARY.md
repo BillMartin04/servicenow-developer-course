@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
+* [Syllabus](syllabus.md)
 * [How to use this course](how-to-use.md)
 
 ## Module 0 · Getting Started

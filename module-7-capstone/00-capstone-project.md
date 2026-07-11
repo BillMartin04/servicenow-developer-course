@@ -100,3 +100,7 @@ Grade your own build against this before calling it done.
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[Certifications & Career Roadmap →](01-certification-and-career.md)

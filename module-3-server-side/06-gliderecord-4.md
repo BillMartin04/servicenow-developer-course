@@ -2,6 +2,13 @@
 
 _Part of Module 3 · Server-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
+
+**Estimated time:** 12 min
+
+## What you'll learn
+
+By the end of this lesson you'll be able to optimise queries and avoid performance anti-patterns.
+
 ## Watch
 
 {% embed url="https://www.youtube.com/watch?v=zMMW_AdWrjI" %}
@@ -34,3 +41,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[← GlideRecord Practical Demo — Part 3](05-gliderecord-3.md) · [Next module: Script Includes & GlideAjax →](../module-4-script-includes-glideajax/README.md)

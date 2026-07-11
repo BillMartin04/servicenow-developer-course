@@ -2,6 +2,13 @@
 
 _Part of Module 2 · Client-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
+
+**Estimated time:** 8 min
+
+## What you'll learn
+
+By the end of this lesson you'll be able to customise catalog item behaviour with catalog client scripts.
+
 ## Watch
 
 {% embed url="https://www.youtube.com/watch?v=Q-EsiiUp0zI" %}
@@ -34,3 +41,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[← UI Policies Explained](01-ui-policies.md) · [Scripting in Catalog UI Policies →](03-catalog-ui-policies.md)

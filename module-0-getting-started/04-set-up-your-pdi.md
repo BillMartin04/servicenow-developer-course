@@ -86,3 +86,7 @@ Complete these before moving on — every later module depends on them.
 - [PDI documentation & FAQ](https://developer.servicenow.com/dev.do#!/guides/washingtondc/now-platform/pdi-guide/personal-developer-instance-guide-introduction)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[← Meet Your Instructor & Kickstart Your Career](01-meet-your-instructor.md) · [Next module: JavaScript & Scripting Foundations →](../module-1-foundations/README.md)

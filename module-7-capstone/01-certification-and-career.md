@@ -76,3 +76,7 @@ Make it concrete this week.
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[← Capstone Project: Build a Production-Ready App](00-capstone-project.md)

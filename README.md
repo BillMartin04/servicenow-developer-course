@@ -29,17 +29,19 @@ Every lesson pairs a video with an overview, key concepts, and hands-on exercise
 | [Module 6](module-6-integrations/README.md) | Integrations, security & reliability |
 | [Module 7](module-7-capstone/README.md) | Capstone & next steps |
 
-## How to follow along
+## Start here
 
-1. [Set up your free PDI](module-0-getting-started/04-set-up-your-pdi.md).
-2. Work through modules in order — each builds on the last.
-3. Do the hands-on checklist in every lesson.
-4. Finish with the [capstone project](module-7-capstone/00-capstone-project.md).
+1. Read the [**Syllabus**](syllabus.md) — objectives, outcomes, prerequisites, and the full curriculum with time estimates.
+2. Read [**How to use this course**](how-to-use.md) — the learning loop and how modules are organised.
+3. [Set up your free PDI](module-0-getting-started/04-set-up-your-pdi.md).
+4. Work through modules in order — each builds on the last, ending with the [capstone project](module-7-capstone/00-capstone-project.md).
 
 ## Legend
 
-- 🎬 Video available
-- 📖 Lesson written, video still to be recorded (fills a gap in the current playlist)
+- 🎬 Video lesson
+- 📖 Written guide, video still to be recorded (fills a gap in the current playlist)
+
+Every module includes learning objectives, prerequisites, time estimates, a knowledge check, and a recap. See the [Syllabus](syllabus.md) for the complete structure.
 
 ---
 

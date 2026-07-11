@@ -111,3 +111,7 @@ Run every snippet in **Scripts - Background** in your PDI and read the log outpu
 - [ServiceNow Scripting documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[Where Scripts Run: Client vs Server →](01-where-scripts-run.md)

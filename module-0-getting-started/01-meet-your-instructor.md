@@ -2,6 +2,13 @@
 
 _Part of Module 0 · Getting Started · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
+
+**Estimated time:** 8 min
+
+## What you'll learn
+
+By the end of this lesson you'll be able to understand the 'build it right' mindset and who this course is for.
+
 ## Watch
 
 {% embed url="https://www.youtube.com/watch?v=VvmIUhYtTYs" %}
@@ -34,3 +41,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[← How to Become a ServiceNow Developer](00-how-to-become-a-developer.md) · [Set Up Your Personal Developer Instance (PDI) →](04-set-up-your-pdi.md)

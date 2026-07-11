@@ -2,6 +2,13 @@
 
 _Part of Module 6 · Integrations, Security & Reliability · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
+
+**Estimated time:** 10 min
+
+## What you'll learn
+
+By the end of this lesson you'll be able to bridge low-code and pro-code with custom actions.
+
 ## Watch
 
 {% embed url="https://www.youtube.com/watch?v=ytJsCv6dzSM" %}
@@ -33,3 +40,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[← Secure Coding with Script Include & GlideAjax](02-secure-coding.md) · [How to Implement Global Error Handling →](04-global-error-handling.md)

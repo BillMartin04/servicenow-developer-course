@@ -2,6 +2,13 @@
 
 _Part of Module 2 · Client-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
+
+**Estimated time:** 12 min
+
+## What you'll learn
+
+By the end of this lesson you'll be able to declaratively control field behaviour with UI Policies.
+
 ## Watch
 
 {% embed url="https://www.youtube.com/watch?v=VuzG7wjf_50" %}
@@ -35,3 +42,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+
+---
+<!--NAV-->
+[← Mastering Client Scripts for Beginners](00-client-scripts.md) · [Catalog Client Scripts Explained →](02-catalog-client-scripts.md)
