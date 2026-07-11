@@ -44,13 +44,13 @@ Work **in order**, Module 0 → Module 7. Each module assumes the previous ones.
 
 | Week | Modules |
 | --- | --- |
-| 1 | Module 0 + Module 1 |
-| 2 | Module 2 |
-| 3 | Module 3 |
-| 4 | Module 4 |
-| 5 | Module 5 |
-| 6 | Module 6 |
-| 7 | Module 7 (capstone) |
+| 1 | Module 0 · Getting Started + Module 1 · JavaScript & Scripting Foundations |
+| 2 | Module 2 · Client-Side Scripting |
+| 3 | Module 3 · Server-Side Scripting |
+| 4 | Module 4 · Script Includes & GlideAjax |
+| 5 | Module 5 · Architecture & Design Patterns |
+| 6 | Module 6 · Integrations, Security & Reliability |
+| 7 | Module 7 · Capstone & Next Steps |
 
 ## Getting help
 
