@@ -8,8 +8,6 @@
 * [Module 0 · Getting Started](module-0-getting-started/README.md)
   * [How to Become a ServiceNow Developer](module-0-getting-started/00-how-to-become-a-developer.md)
   * [Meet Your Instructor & Kickstart Your Career](module-0-getting-started/01-meet-your-instructor.md)
-  * [Scripting Fundamentals — Course Topics](module-0-getting-started/02-course-topics.md)
-  * [Scripting Fundamentals — Topics Overview](module-0-getting-started/03-course-topics-overview.md)
   * [Set Up Your Personal Developer Instance (PDI)](module-0-getting-started/04-set-up-your-pdi.md)
 
 ## Module 1 · JavaScript & Scripting Foundations
@@ -31,9 +29,7 @@
 * [Module 3 · Server-Side Scripting](module-3-server-side/README.md)
   * [Understanding GlideSystem for Efficient Scripting](module-3-server-side/00-glidesystem.md)
   * [How Business Rules Execute (with Examples)](module-3-server-side/01-business-rules-execution.md)
-  * [Business Rules Execution — Deep Dive](module-3-server-side/01b-business-rules-execution-alt.md)
   * [Display Business Rules & g_scratchpad](module-3-server-side/02-display-business-rules.md)
-  * [Display Business Rules — Demo](module-3-server-side/02b-display-business-rules-alt.md)
   * [GlideRecord Practical Demo — Part 1](module-3-server-side/03-gliderecord-1.md)
   * [GlideRecord Practical Demo — Part 2](module-3-server-side/04-gliderecord-2.md)
   * [GlideRecord Practical Demo — Part 3](module-3-server-side/05-gliderecord-3.md)
