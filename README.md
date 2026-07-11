@@ -39,8 +39,7 @@ Every lesson pairs a video with an overview, key concepts, and hands-on exercise
 ## Legend
 
 - 🎬 Video available
-- 🔒 Video exists but is **private** on YouTube (set to public/unlisted to embed)
-- 🆕 Lesson to be recorded (fills a gap in the current playlist)
+- 📖 Lesson written, video still to be recorded (fills a gap in the current playlist)
 
 ---
 
