@@ -1,12 +1,12 @@
 # Certifications & Career Roadmap
 
-_Part of Module 7 · Capstone & Next Steps · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 7 · Final Exercise & Assessment · Final Exercise & Assessment · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
-## Watch
+**Estimated time:** 30 min
 
-{% hint style="info" %}
-**Video to record.** The written roadmap below stands on its own.
-{% endhint %}
+## What you'll learn
+
+The ServiceNow certification ladder, how to build a portfolio that gets you hired, and a concrete 90-day plan.
 
 ## Overview
 
@@ -30,6 +30,10 @@ Certification names, exam codes, and requirements change over time and by region
 **Architect track (longer term)**
 - **Certified Technical Architect (CTA)** and Certified Master Architect are advanced, experience-heavy credentials for senior practitioners. Aim here once you have real delivery experience.
 
+{% hint style="info" %}
+There is no ServiceNow certification for **software architect** — the design quality of the code itself. That is the track this course builds, and it is mapped out in [From Developer to ServiceNow Software Architect](03-architect-roadmap.md).
+{% endhint %}
+
 ### Suggested order for most people
 `CSA → CAD → one CIS (domain of choice) → (experience) → architect track`
 
@@ -37,7 +41,7 @@ Certification names, exam codes, and requirements change over time and by region
 
 Certifications open doors; a portfolio proves you can build.
 
-1. **Ship the capstone** from the previous lesson and record a 2–4 minute demo.
+1. **Ship the [final exercise](00-final-exercise.md)** and record a 2–4 minute demo.
 2. **Publish your work** — export scoped apps and commit them to GitHub with clear READMEs. (You already have a GitHub account; make a "servicenow-portfolio" repo.)
 3. **Write up what you built** — a short post or GitBook page per project explaining the problem, your architecture, and the patterns you used.
 4. **Contribute** — answer questions in the [ServiceNow Community](https://www.servicenow.com/community/), share short demos on YouTube/LinkedIn.
@@ -54,7 +58,7 @@ Certifications open doors; a portfolio proves you can build.
 | Weeks | Focus |
 | --- | --- |
 | 1–3 | Finish this course; keep a working PDI; earn/confirm **CSA** readiness |
-| 4–6 | Build the **capstone**, publish it to GitHub with a demo video |
+| 4–6 | Build the **[final exercise](00-final-exercise.md)**, publish it to GitHub with a demo video |
 | 7–9 | Study for and sit **CAD**; write up 2 portfolio projects |
 | 10–12 | Pick a **CIS domain**, start applying/interviewing, contribute in the community |
 
@@ -74,9 +78,10 @@ Make it concrete this week.
 - [ServiceNow Training & Certification](https://www.servicenow.com/services/training-and-certification.html)
 - [ServiceNow Community](https://www.servicenow.com/community/)
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
+- [From Developer to ServiceNow Software Architect](03-architect-roadmap.md)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
-- [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- [Get Help & Get Verified](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← Capstone Project: Build a Production-Ready App](00-capstone-project.md)
+[← From Developer to ServiceNow Software Architect](03-architect-roadmap.md)

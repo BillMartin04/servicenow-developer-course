@@ -1,6 +1,6 @@
 # Display Business Rules & g_scratchpad
 
-_Part of Module 3 · Server-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 3 · Server-Side Scripting · Server-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 9 min
@@ -40,7 +40,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← How Business Rules Execute (with Examples)](01-business-rules-execution.md) · [GlideRecord Practical Demo — Part 1 →](03-gliderecord-1.md)
+[← How Business Rules Execute (with Examples)](05-business-rules-execution.md) · [Script Includes Explained (Full Demo) →](../module-4-script-includes-glideajax/00-script-includes.md)

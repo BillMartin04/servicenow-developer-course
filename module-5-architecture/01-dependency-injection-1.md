@@ -1,6 +1,6 @@
 # How to Implement Dependency Injection — Part 1
 
-_Part of Module 5 · Architecture & Design Patterns · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 5 · Architecture & Design Patterns · Architecture & Design Patterns · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 12 min
@@ -40,6 +40,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->

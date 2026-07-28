@@ -1,6 +1,6 @@
 # GlideRecord Practical Demo — Part 4
 
-_Part of Module 3 · Server-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 3 · Server-Side Scripting · Server-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 12 min
@@ -41,7 +41,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← GlideRecord Practical Demo — Part 3](05-gliderecord-3.md) · [Next module: Script Includes & GlideAjax →](../module-4-script-includes-glideajax/README.md)
+[← GlideRecord Practical Demo — Part 3](03-gliderecord-3.md) · [How Business Rules Execute (with Examples) →](05-business-rules-execution.md)

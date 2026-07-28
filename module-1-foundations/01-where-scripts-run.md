@@ -1,6 +1,6 @@
 # Where Scripts Run: Client vs Server
 
-_Part of Module 1 · JavaScript & Scripting Foundations · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 1 · JavaScript & Scripting Foundations · JavaScript & Scripting Foundations · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 ## Watch
 
@@ -88,7 +88,8 @@ Do these in your PDI to feel the difference.
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← JavaScript Essentials for ServiceNow](00-javascript-essentials.md) · [Next module: Client-Side Scripting →](../module-2-client-side/README.md)
+[← JavaScript Essentials for ServiceNow](00-javascript-essentials.md) · [Mastering Client Scripts for Beginners →](../module-2-client-side/00-client-scripts.md)

@@ -1,6 +1,6 @@
 # REST API Integration (Part 2)
 
-_Part of Module 6 · Integrations, Security & Reliability · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 6 · Integrations, Security & Reliability · Integrations, Security & Reliability · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 12 min
@@ -40,7 +40,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← REST API Integration (Part 1)](00-rest-api-1.md) · [Secure Coding with Script Include & GlideAjax →](02-secure-coding.md)
+[← REST API Integration — Part 1](00-rest-api-1.md) · [Secure Coding with Script Includes & GlideAjax →](02-secure-coding.md)

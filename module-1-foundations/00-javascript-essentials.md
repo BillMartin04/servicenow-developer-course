@@ -1,6 +1,6 @@
 # JavaScript Essentials for ServiceNow
 
-_Part of Module 1 · JavaScript & Scripting Foundations · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 1 · JavaScript & Scripting Foundations · JavaScript & Scripting Foundations · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 ## Watch
 
@@ -111,7 +111,8 @@ Run every snippet in **Scripts - Background** in your PDI and read the log outpu
 - [ServiceNow Scripting documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[Where Scripts Run: Client vs Server →](01-where-scripts-run.md)
+[← Configure Your PDI for Development](../module-0-getting-started/03-configure-your-pdi.md) · [Where Scripts Run: Client vs Server →](01-where-scripts-run.md)

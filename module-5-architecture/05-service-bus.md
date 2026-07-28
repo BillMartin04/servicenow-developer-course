@@ -1,6 +1,6 @@
 # Service Bus Architecture for Reusable Integrations
 
-_Part of Module 5 · Architecture & Design Patterns · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 5 · Architecture & Design Patterns · Architecture & Design Patterns · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 12 min
@@ -40,7 +40,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← Queueing & Event-Driven Architecture](03-queueing-event-driven.md) · [Script Include & GlideAjax for Architects →](05-script-include-glideajax-arch.md)
+[← Queueing & Event-Driven Architecture](04-queueing-event-driven.md) · [REST API Integration — Part 1 →](../module-6-integrations/00-rest-api-1.md)

@@ -1,6 +1,6 @@
 # Module 1 · JavaScript & Scripting Foundations
 
-**Estimated time:** ~40 min  ·  **Lessons:** 2
+**Estimated time:** ~40 min  ·  **Topics:** 2
 
 Build the JavaScript foundation every ServiceNow script depends on, and internalise the single most important mental model: where code runs.
 
@@ -17,12 +17,12 @@ By the end of this module, you will be able to:
 
 Module 0 complete with a working PDI. Basic familiarity with any programming concept is helpful but not required.
 
-## Lessons
+## Topics
 
-| # | Lesson | Type | Time | You'll learn to |
+| # | Topic | Type | Time | You'll learn to |
 | --- | --- | --- | --- | --- |
-| 1 | [JavaScript Essentials for ServiceNow](00-javascript-essentials.md) | Guide | 20 min | Master the JavaScript subset used across the platform |
-| 2 | [Where Scripts Run: Client vs Server](01-where-scripts-run.md) | Guide | 20 min | Choose client vs server correctly and trace the form lifecycle |
+| 1.1 | [JavaScript Essentials for ServiceNow](00-javascript-essentials.md) | 📖 Guide | 20 min | Master the JavaScript subset used across the platform |
+| 1.2 | [Where Scripts Run: Client vs Server](01-where-scripts-run.md) | 📖 Guide | 20 min | Choose client vs server correctly and trace the form lifecycle |
 
 ## Knowledge check
 
@@ -37,5 +37,9 @@ Before moving on, make sure you can answer these:
 {% hint style="success" %}
 You can write platform-safe JavaScript and confidently decide whether any given piece of logic belongs in the browser or on the server.
 {% endhint %}
+
+## Need help?
+
+Ask your question in the comments of the video for the topic you are stuck on — see [Get Help & Get Verified](../support-and-verification.md).
 
 **Next up →** [Module 2 · Client-Side Scripting](../module-2-client-side/README.md)

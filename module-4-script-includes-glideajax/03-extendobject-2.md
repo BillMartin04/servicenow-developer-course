@@ -1,6 +1,6 @@
 # Script Include & Object.extendObject — Part 2
 
-_Part of Module 4 · Script Includes & GlideAjax · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 4 · Script Includes & GlideAjax · Script Includes & GlideAjax · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 10 min
@@ -40,7 +40,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← Script Include & Object.extendObject — Part 1](02-extendobject-1.md) · [Next module: Architecture & Design Patterns →](../module-5-architecture/README.md)
+[← Script Include & Object.extendObject — Part 1](02-extendobject-1.md) · [Object-Oriented Principles for Architects →](../module-5-architecture/00-oop-principles.md)

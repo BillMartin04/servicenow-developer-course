@@ -1,6 +1,6 @@
 # How to Implement Global Error Handling
 
-_Part of Module 6 · Integrations, Security & Reliability · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 6 · Integrations, Security & Reliability · Integrations, Security & Reliability · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 11 min
@@ -40,7 +40,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← Call a Script Include in a Flow Designer Custom Action](03-flow-designer-custom-action.md) · [Next module: Capstone & Next Steps →](../module-7-capstone/README.md)
+[← Call a Script Include in a Flow Designer Custom Action](03-flow-designer-custom-action.md) · [Final Exercise: Build a Production-Ready App →](../module-7-capstone/00-final-exercise.md)

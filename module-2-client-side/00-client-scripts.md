@@ -1,6 +1,6 @@
 # Mastering Client Scripts for Beginners
 
-_Part of Module 2 · Client-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 2 · Client-Side Scripting · Client-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 14 min
@@ -42,7 +42,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[UI Policies Explained →](01-ui-policies.md)
+[← Where Scripts Run: Client vs Server](../module-1-foundations/01-where-scripts-run.md) · [UI Policies Explained →](01-ui-policies.md)

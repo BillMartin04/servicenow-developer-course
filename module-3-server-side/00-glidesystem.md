@@ -1,6 +1,6 @@
 # Understanding GlideSystem for Efficient Scripting
 
-_Part of Module 3 · Server-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 3 · Server-Side Scripting · Server-Side Scripting · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 11 min
@@ -41,7 +41,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[How Business Rules Execute (with Examples) →](01-business-rules-execution.md)
+[← Scripting in Catalog UI Policies](../module-2-client-side/03-catalog-ui-policies.md) · [GlideRecord Practical Demo — Part 1 →](01-gliderecord-1.md)

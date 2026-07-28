@@ -1,6 +1,6 @@
 # Call a Script Include in a Flow Designer Custom Action
 
-_Part of Module 6 · Integrations, Security & Reliability · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
+_Part of Module 6 · Integrations, Security & Reliability · Integrations, Security & Reliability · [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)_
 
 
 **Estimated time:** 10 min
@@ -40,7 +40,8 @@ Complete these in your Personal Developer Instance (PDI).
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ---
 <!--NAV-->
-[← Secure Coding with Script Include & GlideAjax](02-secure-coding.md) · [How to Implement Global Error Handling →](04-global-error-handling.md)
+[← Secure Coding with Script Includes & GlideAjax](02-secure-coding.md) · [How to Implement Global Error Handling →](04-global-error-handling.md)

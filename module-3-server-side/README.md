@@ -1,6 +1,6 @@
 # Module 3 · Server-Side Scripting
 
-**Estimated time:** ~1 hr  ·  **Lessons:** 7
+**Estimated time:** ~1 hr 20 min  ·  **Topics:** 7
 
 Work on the server with GlideSystem, Business Rules, and the GlideRecord API — the core of reading and writing data in ServiceNow.
 
@@ -17,17 +17,21 @@ By the end of this module, you will be able to:
 
 Modules 0–2. Comfort with server-side execution and JavaScript basics.
 
-## Lessons
+## Topics
 
-| # | Lesson | Type | Time | You'll learn to |
+| # | Topic | Type | Time | You'll learn to |
 | --- | --- | --- | --- | --- |
-| 1 | [Understanding GlideSystem for Efficient Scripting](00-glidesystem.md) | Video | 11 min | Use gs for logging, users, dates, and properties |
-| 2 | [How Business Rules Execute (with Examples)](01-business-rules-execution.md) | Video | 13 min | Master the four Business Rule timings and order of execution |
-| 3 | [Display Business Rules & g_scratchpad](02-display-business-rules.md) | Video | 9 min | Pass server data to the client with g_scratchpad |
-| 4 | [GlideRecord Practical Demo — Part 1](03-gliderecord-1.md) | Video | 12 min | Query records with addQuery, next, and get |
-| 5 | [GlideRecord Practical Demo — Part 2](04-gliderecord-2.md) | Video | 12 min | Insert, update, and delete records safely |
-| 6 | [GlideRecord Practical Demo — Part 3](05-gliderecord-3.md) | Video | 12 min | Use OR queries, ordering, aggregation, and dot-walking |
-| 7 | [GlideRecord Practical Demo — Part 4](06-gliderecord-4.md) | Video | 12 min | Optimise queries and avoid performance anti-patterns |
+| 3.1 | [Understanding GlideSystem for Efficient Scripting](00-glidesystem.md) | 🎬 Video | 11 min | Use gs for logging, users, dates, and properties |
+| 3.2 | [GlideRecord Practical Demo — Part 1](01-gliderecord-1.md) | 🎬 Video | 12 min | Query records with addQuery, next, and get |
+| 3.3 | [GlideRecord Practical Demo — Part 2](02-gliderecord-2.md) | 🎬 Video | 12 min | Insert, update, and delete records safely |
+| 3.4 | [GlideRecord Practical Demo — Part 3](03-gliderecord-3.md) | 🎬 Video | 12 min | Use OR queries, ordering, aggregation, and dot-walking |
+| 3.5 | [GlideRecord Practical Demo — Part 4](04-gliderecord-4.md) | 🎬 Video | 12 min | Optimise queries and avoid performance anti-patterns |
+| 3.6 | [How Business Rules Execute (with Examples)](05-business-rules-execution.md) | 🎬 Video | 13 min | Master the four Business Rule timings and order of execution |
+| 3.7 | [Display Business Rules & g_scratchpad](06-display-business-rules.md) | 🎬 Video | 9 min | Pass server data to the client with g_scratchpad |
+
+{% hint style="info" %}
+**Why GlideRecord comes before Business Rules:** a Business Rule script is mostly GlideRecord code. Learn the API first and the automation topic becomes obvious instead of overwhelming.
+{% endhint %}
 
 ## Knowledge check
 
@@ -42,5 +46,9 @@ Before moving on, make sure you can answer these:
 {% hint style="success" %}
 You can read and write platform data reliably, run logic at the right Business Rule stage, and keep queries fast.
 {% endhint %}
+
+## Need help?
+
+Ask your question in the comments of the video for the topic you are stuck on — see [Get Help & Get Verified](../support-and-verification.md).
 
 **Next up →** [Module 4 · Script Includes & GlideAjax](../module-4-script-includes-glideajax/README.md)
