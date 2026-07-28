@@ -105,6 +105,8 @@ Run every snippet in **Scripts - Background** in your PDI and read the log outpu
 - [ ] Build an object, add two properties, and log it with `JSON.stringify()`
 - [ ] Demonstrate truthiness: log whether `''`, `'0'`, `0`, and `[]` are truthy
 
+**Done when:** all four snippets run without error in Scripts - Background, your sum function returns the correct total, and your truthiness log correctly shows `''` and `0` as falsy while `'0'` and `[]` are truthy.
+
 ## Frequently asked questions
 
 ### Why does `gr.getValue('priority')` return `'1'` and not `1`?

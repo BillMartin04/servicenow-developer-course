@@ -82,6 +82,8 @@ Do these in your PDI to feel the difference.
 - [ ] For each script type in this course, write down whether it is client or server
 - [ ] Trace one form save end-to-end using the lifecycle above
 
+**Done when:** you can state, for every script type in this course, whether it runs client-side or server-side, and you have seen the browser read a field instantly while the server read the same record from the database.
+
 ## Frequently asked questions
 
 ### Why can't a client script just query the database directly?
