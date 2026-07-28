@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to build the four client script types a
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=WLNQinTkLfQ" %}
+{% embed url="<https://www.youtube.com/watch?v=WLNQinTkLfQ>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=WLNQinTkLfQ)
 

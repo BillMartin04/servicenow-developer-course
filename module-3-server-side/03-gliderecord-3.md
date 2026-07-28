@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to use OR queries, ordering, aggregatio
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=VJas9q5pNYU" %}
+{% embed url="<https://www.youtube.com/watch?v=VJas9q5pNYU>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=VJas9q5pNYU)
 

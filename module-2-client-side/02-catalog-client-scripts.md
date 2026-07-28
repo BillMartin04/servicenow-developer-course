@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to customise catalog item behaviour wit
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=Q-EsiiUp0zI" %}
+{% embed url="<https://www.youtube.com/watch?v=Q-EsiiUp0zI>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=Q-EsiiUp0zI)
 

@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to validate input and enforce access se
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=Ccxb4UJKF9c" %}
+{% embed url="<https://www.youtube.com/watch?v=Ccxb4UJKF9c>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=Ccxb4UJKF9c)
 

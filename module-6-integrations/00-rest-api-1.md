@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to call external REST APIs with RESTMes
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=hfnyomgSFWo" %}
+{% embed url="<https://www.youtube.com/watch?v=hfnyomgSFWo>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=hfnyomgSFWo)
 

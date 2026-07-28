@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to call the server from the client asyn
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=0eU1uwreZH4" %}
+{% embed url="<https://www.youtube.com/watch?v=0eU1uwreZH4>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=0eU1uwreZH4)
 

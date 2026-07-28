@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to implement class inheritance in Servi
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=PXVt-CJc86M" %}
+{% embed url="<https://www.youtube.com/watch?v=PXVt-CJc86M>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=PXVt-CJc86M)
 

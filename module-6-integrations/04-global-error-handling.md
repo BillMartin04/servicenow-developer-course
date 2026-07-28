@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to centralise logging and graceful fail
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=0Ctaw6vnP1I" %}
+{% embed url="<https://www.youtube.com/watch?v=0Ctaw6vnP1I>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=0Ctaw6vnP1I)
 

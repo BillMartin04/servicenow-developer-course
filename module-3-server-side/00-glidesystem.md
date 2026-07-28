@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to use gs for logging, users, dates, an
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=q1OfAmqvMo4" %}
+{% embed url="<https://www.youtube.com/watch?v=q1OfAmqvMo4>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=q1OfAmqvMo4)
 

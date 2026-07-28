@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to apply encapsulation, SOLID, and cohe
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=r9n5C74a-cE" %}
+{% embed url="<https://www.youtube.com/watch?v=r9n5C74a-cE>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=r9n5C74a-cE)
 

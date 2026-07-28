@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to declaratively control field behaviou
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=VuzG7wjf_50" %}
+{% embed url="<https://www.youtube.com/watch?v=VuzG7wjf_50>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=VuzG7wjf_50)
 

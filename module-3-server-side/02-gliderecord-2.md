@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to insert, update, and delete records s
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=gAO5l6MQC2E" %}
+{% embed url="<https://www.youtube.com/watch?v=gAO5l6MQC2E>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=gAO5l6MQC2E)
 
