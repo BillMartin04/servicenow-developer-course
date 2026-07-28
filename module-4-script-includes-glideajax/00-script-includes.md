@@ -27,10 +27,10 @@ Script Includes are reusable server-side classes. Learn how to build, scope, and
 
 ## Key concepts
 
-- Script Include structure
-- Client-callable vs on-demand
-- Scope and access control
-- Reuse patterns
+- **Script Include structure** — a Script Include is a record that wraps a JavaScript object, typically created with `var ClassName = Class.create();` followed by a `prototype` object holding `initialize()` and other methods, plus `type: 'ClassName'` at the end.
+- **Client-callable vs on-demand** — checking **Client callable** exposes the Script Include to `GlideAjax` from client scripts; leaving it unchecked means it only runs server-side (business rules, other Script Includes) and is not reachable from the browser, which is safer and faster to load.
+- **Scope and access control** — the API Name is the fully qualified reference (e.g. `x_app_name.ClassName`) you use to call the include from another scope, while **Accessible from** controls whether other application scopes may call it at all.
+- **Reuse patterns** — putting shared logic (validation, lookups, calculations) in one Script Include and calling it from multiple business rules, client scripts, or other Script Includes avoids copy-pasting the same code everywhere.
 
 ## Hands-on
 
@@ -38,21 +38,28 @@ Script Includes are reusable server-side classes. Learn how to build, scope, and
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Create a utility Script Include and call it from a Background Script
+Create a reusable Script Include and prove it works from two different callers.
+
+- [ ] Create a new Script Include named `StringUtils` with `Class.create()` and a method `reverse(str)` that returns the reversed string
+- [ ] Leave **Client callable** unchecked since this will only be called server-side
+- [ ] Call `new StringUtils().reverse('hello')` from Scripts - Background and log the result with `gs.info()`
+- [ ] Call the same method from inside a Business Rule on an unrelated table and log the result again
+
+**Done when:** both callers log `olleh`, confirming the Script Include is genuinely reusable rather than tied to one script.
 
 ## Frequently asked questions
 
-### What do you need to know about script include structure?
+### Do I need to check "Client callable" on every Script Include?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No. Only check it if the Script Include will be invoked directly from a client script via `GlideAjax`. Server-only callers — business rules, other Script Includes, scheduled jobs — never need it, and leaving it unchecked reduces the client-side attack surface.
 
-### What do you need to know about client-callable vs on-demand?
+### What's the difference between the Script Include's name and its API name?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+The **Name** field is just the record's label in the list; the **API Name** (shown as `scope.ClassName`) is the identifier you actually reference in code, especially when calling across scopes. In the global scope they often look identical, but in a scoped app the API name is prefixed with the scope, e.g. `x_acme_util.StringUtils`.
 
-### What do you need to know about scope and access control?
+### Why use a Script Include instead of just writing the logic inline each time?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+A Script Include lets one tested implementation be called from many business rules, client scripts, and other Script Includes, so a fix or improvement only needs to happen in one place. It also keeps large or reusable logic out of individual business rules, making both easier to read and maintain.
 
 ## Discussion and questions
 

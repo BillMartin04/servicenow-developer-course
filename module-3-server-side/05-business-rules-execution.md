@@ -27,10 +27,10 @@ Business rules are the backbone of server-side automation. Learn when they run: 
 
 ## Key concepts
 
-- The four business rule timings
-- current and previous objects
-- Order of execution
-- Common pitfalls
+- **The four business rule timings** — **before** runs before the database write and can change `current` values before they save, **after** runs once the record is committed, **async** runs after in a separate scheduled job so it doesn't block the user's save, and **display** runs when the form loads to prepare client-side data.
+- **current and previous objects** — `current` is the `GlideRecord` of the record being saved with its new values, while `previous` (available in after/async rules on update) holds the record's values before this save, letting you compare old vs. new.
+- **Order of execution** — within the same timing (e.g. multiple before rules), rules run in ascending **Order** field value, so a lower order number runs first; get the sequencing wrong and a later rule may depend on a field a later-ordered rule hasn't set yet.
+- **Common pitfalls** — calling `current.update()` inside a before rule triggers a redundant, recursive save since the pending write already happens automatically; only call `.update()` explicitly in after/async rules or when working with a different record.
 
 ## Hands-on
 
@@ -38,22 +38,28 @@ Business rules are the backbone of server-side automation. Learn when they run: 
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Create a before business rule that sets a field
-- [ ] Create an after rule that logs a change
+Build before and after Business Rules on Incident and observe their order.
+
+- [ ] Create a **before update** Business Rule on `incident` that sets a custom field (or `work_notes`) using `current.setValue()`
+- [ ] Create an **after update** Business Rule on the same table and condition that calls `gs.info()` comparing `previous.priority` to `current.priority`
+- [ ] Update an incident's priority from the form and check **System Logs > System Log** for the after rule's message
+- [ ] Change the before rule's **Order** field to a higher number than a second before rule you add, and confirm in the log which one's effect "wins"
+
+**Done when:** the after rule's log line correctly shows both the old and new priority values, and you can explain why your before rule's field change was visible by the time the after rule ran.
 
 ## Frequently asked questions
 
-### What do you need to know about the four business rule timings?
+### When should I use an async Business Rule instead of after?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Use async when the logic is slow or not time-critical for the user, like sending an email or calling an external integration, since async rules run in a scheduled job after the transaction completes instead of blocking the save. Use after when the logic must complete, and be visible to the user, immediately after the record commits, such as updating a related record other logic depends on right away.
 
-### What do you need to know about current and previous objects?
+### Why is previous undefined in my before Business Rule?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+`previous` is only populated in after and async Business Rules on an update, because it represents the database's prior state which before rules run ahead of. In a before rule, compare against the database directly with a fresh `GlideRecord` query if you need the pre-save value, or check `current.field.changes()` to see if a field was modified.
 
-### What do you need to know about order of execution?
+### Does the Order field control execution across before and after rules together?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No, order only sequences rules within the same timing and same table/condition; before rules all run (in their own order) before any after rules run, and async rules run afterward in the background. If you need rule B to definitely run after rule A but they're different timings, that ordering is guaranteed by the timing itself, not the Order field.
 
 ## Discussion and questions
 

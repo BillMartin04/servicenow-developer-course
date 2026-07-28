@@ -82,6 +82,26 @@ Do these in your PDI to feel the difference.
 - [ ] For each script type in this course, write down whether it is client or server
 - [ ] Trace one form save end-to-end using the lifecycle above
 
+## Frequently asked questions
+
+### Why can't a client script just query the database directly?
+
+Client scripts run in the user's browser, which has no direct connection to the database — only the ServiceNow node does. To get server data mid-form, the client must call a client-callable Script Include through **GlideAjax**. This boundary is a security feature, not a limitation: it keeps data access on the server where ACLs are enforced.
+
+### If I validate a field in an onSubmit client script, is that enough?
+
+No. Client-side validation is for **user experience** — fast feedback — but it can be bypassed (disabled JavaScript, direct API calls, list edits). Any rule that *must* hold has to be enforced server-side as well, typically in a **before Business Rule** or a data policy. Treat client validation as a convenience layer on top of server enforcement.
+
+### What is `g_scratchpad` and when would I use it?
+
+`g_scratchpad` is a small object the **server** populates in a **display Business Rule** before the form renders, and the **client** reads on load. Use it to hand a client script data it would otherwise need a GlideAjax round-trip to fetch — for example a config flag or a related record's value — saving a call when you already know the data at render time.
+
+## Discussion and questions
+
+Have a question or want to share your progress? Post a comment under the course videos and the instructor will reply.
+
+[Join the discussion on YouTube](https://www.youtube.com/@techtalkwithbill)
+
 ## Resources
 
 - [ServiceNow: Client vs server scripting](https://www.servicenow.com/docs/)
@@ -90,6 +110,8 @@ Do these in your PDI to feel the difference.
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
 - Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
----
-<!--NAV-->
+## Continue the course
+
 [← JavaScript Essentials for ServiceNow](00-javascript-essentials.md) · [Mastering Client Scripts for Beginners →](../module-2-client-side/00-client-scripts.md)
+
+Back to: [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg) | [Course home](../README.md) | [Full syllabus](../syllabus.md)

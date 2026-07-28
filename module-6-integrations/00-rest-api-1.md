@@ -27,9 +27,9 @@ Call external REST APIs from ServiceNow using RESTMessageV2 wrapped in a Script 
 
 ## Key concepts
 
-- RESTMessageV2 basics
-- Endpoints, methods, headers
-- Parsing JSON responses
+- **RESTMessageV2 basics** — in a scoped application, create the message with `new sn_ws.RESTMessageV2()` (either a fresh instance or one built from a saved REST Message record and method name), then call `execute()` to send the request and get a response object back.
+- **Endpoints, methods, headers** — set the target with `setEndpoint('https://...')`, choose the verb with `setHttpMethod('GET')` (or POST/PUT/DELETE), and attach headers such as content type or auth tokens with `setRequestHeader('name', 'value')` before calling `execute()`.
+- **Parsing JSON responses** — call `response.getBody()` to get the raw string, then wrap `JSON.parse(body)` in a `try/catch` so a malformed or non-JSON body (like an HTML error page) doesn't throw an uncaught exception in your Script Include.
 
 ## Hands-on
 
@@ -37,21 +37,29 @@ Call external REST APIs from ServiceNow using RESTMessageV2 wrapped in a Script 
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Call a public REST API and log the response
+Build a Script Include that calls a public REST API and logs the parsed result.
+
+- [ ] Create a scoped Script Include with a function that builds `new sn_ws.RESTMessageV2()`
+- [ ] Set the endpoint to a public test API (e.g. `https://jsonplaceholder.typicode.com/todos/1`) and the method to `GET`
+- [ ] Call `execute()` and store the response object
+- [ ] Call `getStatusCode()` and only parse the body when it is `200`
+- [ ] Wrap `JSON.parse(response.getBody())` in a `try/catch` and log the resulting object with `gs.info()`
+
+**Done when:** running the Script Include from Scripts - Background logs the parsed JSON fields (not a raw string), and changing the endpoint to an invalid URL logs a handled error instead of throwing an exception.
 
 ## Frequently asked questions
 
-### What do you need to know about restmessagev2 basics?
+### Why use RESTMessageV2 instead of an outbound REST message record?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+A saved REST Message record is reusable and shows up in the integration's configuration UI, which is easier to maintain and reuse across scripts. Building `new sn_ws.RESTMessageV2()` directly in script gives you full control for one-off or highly dynamic calls, but any hard-coded endpoint or header should really live in a saved message or system property instead.
 
-### What do you need to know about endpoints, methods, headers?
+### Do I need setHttpMethod if I built the message from a saved REST Message record?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+If you constructed the message with `new sn_ws.RESTMessageV2('MyRESTMessage', 'get')`, the method is already set from the record and you don't need to call `setHttpMethod()` again. You only need it when you build the message from scratch with the no-argument constructor.
 
-### What do you need to know about parsing json responses?
+### Why does JSON.parse sometimes fail on a response that looks fine?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Some APIs return an empty body, plain text, or an HTML error page instead of JSON, especially on failures or redirects. Always check `getStatusCode()` before parsing, and wrap `JSON.parse()` in a `try/catch` so an unexpected body doesn't crash the calling script.
 
 ## Discussion and questions
 

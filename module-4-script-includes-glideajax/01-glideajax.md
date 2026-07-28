@@ -27,10 +27,10 @@ GlideAjax lets client scripts call server-side Script Includes asynchronously wi
 
 ## Key concepts
 
-- AbstractAjaxProcessor
-- getXMLAnswer and getXML
-- Passing parameters
-- Async best practices
+- **AbstractAjaxProcessor** — a client-callable Script Include must extend this base class via `Object.extendsObject(AbstractAjaxProcessor, ClassName)`; it supplies the `initialize()` and `getParameter()` plumbing, so your Script Include must never define its own `initialize()`.
+- **getXMLAnswer and getXML** — `getXMLAnswer(callback)` is the async call that returns just the string your server method sends back via `return`; `getXML(callback)` returns the full XML response document and is rarely needed for simple value passing.
+- **Passing parameters** — `ga.addParam('sysparm_name', 'methodName')` tells the server which function to run, and additional `addParam('sysparm_myArg', value)` calls pass extra values, all retrieved server-side with `this.getParameter('sysparm_myArg')`.
+- **Async best practices** — always use the callback-based `getXMLAnswer()` instead of the deprecated synchronous `getXMLWait()`, since synchronous calls freeze the browser UI while waiting on the server.
 
 ## Hands-on
 
@@ -38,21 +38,28 @@ GlideAjax lets client scripts call server-side Script Includes asynchronously wi
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Build a GlideAjax call that validates a field server-side
+Build an end-to-end GlideAjax call that validates a field value on the server.
+
+- [ ] Create a client-callable Script Include `AjaxValidator` extending `AbstractAjaxProcessor` (no custom `initialize()`) with a method `isPriorityHigh()` that reads `sysparm_priority` and returns `JSON.stringify({ isHigh: value === '1' })`
+- [ ] On the Incident form, add a Client Script that builds `new GlideAjax('AjaxValidator')`, calls `addParam('sysparm_name','isPriorityHigh')` and `addParam('sysparm_priority', g_form.getValue('priority'))`
+- [ ] Call `getXMLAnswer(callback)` and in the callback `JSON.parse()` the response string
+- [ ] Show an alert if `isHigh` is true
+
+**Done when:** changing the Incident's priority to 1 - Critical triggers the alert, and other priority values do not.
 
 ## Frequently asked questions
 
-### What do you need to know about abstractajaxprocessor?
+### Why does my GlideAjax callback receive `undefined` or the whole XML instead of my value?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+This almost always means the Script Include's `initialize()` was overridden, breaking the parent `AbstractAjaxProcessor` wiring, or the client callback is reading `response` directly instead of calling `getXMLAnswer()`'s parameter. Use `getXMLAnswer(function(response) { var answer = response; })` and never define `initialize()` on the Script Include.
 
-### What do you need to know about getxmlanswer and getxml?
+### Can GlideAjax return an object or array directly?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No. GlideAjax only ever returns a string. To send structured data, `JSON.stringify()` the object server-side before `return`ing it, then `JSON.parse()` the string in the client callback to get it back as an object.
 
-### What do you need to know about passing parameters?
+### Should I use getXMLAnswer or getXMLWait?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Always prefer `getXMLAnswer()`. It is asynchronous and does not block the browser while it waits for the server, whereas `getXMLWait()` is synchronous, deprecated, and can make the whole UI feel frozen.
 
 ## Discussion and questions
 

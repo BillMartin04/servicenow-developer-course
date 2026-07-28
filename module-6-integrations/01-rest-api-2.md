@@ -27,9 +27,9 @@ Part 2 covers authentication, error handling, and wrapping the call in a reusabl
 
 ## Key concepts
 
-- Basic/OAuth auth
-- Timeouts and retries
-- Reusable integration Script Include
+- **Basic/OAuth auth** — rather than hard-coding a username, password, or token in script, attach a connection & credential alias (or an OAuth profile) to the REST message so ServiceNow injects the credentials at execute time and keeps them out of source code.
+- **Query params and status/error handling** — build the query string with `setQueryParameter('name', 'value')` calls instead of concatenating strings into the URL, then after `execute()` always check `getStatusCode()` and branch on non-200 codes rather than assuming the call succeeded.
+- **Timeouts and async execute** — `setHttpTimeout(ms)` takes a value in **milliseconds** (e.g. `setHttpTimeout(10000)` for 10 seconds), and `executeAsync()` sends the request without blocking the current transaction, with the response handled later via a callback/event instead of the return value of `execute()`.
 
 ## Hands-on
 
@@ -37,21 +37,29 @@ Part 2 covers authentication, error handling, and wrapping the call in a reusabl
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Wrap the REST call in a client-callable Script Include
+Wrap a REST call in a reusable Script Include with proper auth, timeout, and error handling.
+
+- [ ] Create a Script Include that builds a `RESTMessageV2` using a connection & credential alias (or a system property for a test token) instead of a literal password
+- [ ] Add one or more query parameters with `setQueryParameter()`
+- [ ] Call `setHttpTimeout(10000)` and then `execute()`
+- [ ] Check `getStatusCode()` and return a consistent result object like `{ success: true, data: ... }` or `{ success: false, error: ... }`
+- [ ] Force a failure (bad endpoint or short timeout) and confirm your function returns the error shape instead of throwing
+
+**Done when:** calling the function with valid input returns `success: true` with parsed data, and calling it with a broken endpoint or a 1ms timeout returns `success: false` with a useful error message instead of an uncaught exception.
 
 ## Frequently asked questions
 
-### What do you need to know about basic/oauth auth?
+### Why shouldn't I put my API password directly in the script?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Hard-coded credentials get exposed to anyone who can read the script, get captured in update sets and version history, and are painful to rotate. Use a connection & credential alias (or OAuth profile) on the REST message, or at minimum store the secret in a protected system property, so the credential is managed and swappable outside of code.
 
-### What do you need to know about timeouts and retries?
+### What's the difference between execute() and executeAsync()?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+`execute()` blocks the current transaction until the external system responds, which is simplest but ties up a semaphore for the call's duration. `executeAsync()` fires the request and lets the transaction continue, with the response processed later — useful for slow endpoints where you don't want to block a user-facing transaction.
 
-### What do you need to know about reusable integration script include?
+### My integration hangs or times out inconsistently — what should I check?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+First confirm `setHttpTimeout()` is set to a sensible value in milliseconds, since the default can be longer than you expect and leave transactions hanging. Then confirm you're checking `getStatusCode()` and `getErrorMessage()` on every call, since a slow or failing endpoint should surface as a handled error rather than an unexplained hang.
 
 ## Discussion and questions
 

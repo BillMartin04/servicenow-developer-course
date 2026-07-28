@@ -27,10 +27,10 @@ Catalog client scripts customise Service Catalog item behaviour and differ from 
 
 ## Key concepts
 
-- Catalog client script scope
-- Variables vs fields
-- g_form in the catalog context
-- Real-world use cases
+- **Catalog client script scope** — a catalog client script is attached to a specific catalog item (or a variable set), so it only runs on that item's form, not on other catalog items or standard record forms.
+- **Variables vs fields** — catalog items are built from **variables** (defined on the catalog item), not table columns, so you reference them with `g_form.getValue('variable_name')` using the variable's name, not a database field name.
+- **g_form in the catalog context** — the same `g_form` API from standard Client Scripts is available on catalog item forms, but it operates on variables and works both on the classic Service Catalog and the Service Portal / Employee Center widgets.
+- **Real-world use cases** — typical examples are showing or hiding a variable based on another variable's answer, populating a reference variable's default value, or validating input before allowing a submission.
 
 ## Hands-on
 
@@ -38,21 +38,28 @@ Catalog client scripts customise Service Catalog item behaviour and differ from 
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Add a catalog client script to a catalog item variable
+Build a catalog client script on a Service Catalog item.
+
+- [ ] Open (or create) a catalog item with at least two variables, e.g. "Request Type" (choice) and "Justification" (multi-line text)
+- [ ] Add a catalog client script of type `onChange` on "Request Type" that shows "Justification" only when the value is "Other"
+- [ ] Test it by opening the catalog item form and switching Request Type between values
+- [ ] Confirm the script does NOT fire on a different, unrelated catalog item
+
+**Done when:** Justification appears only when Request Type is "Other", and toggling back hides it again.
 
 ## Frequently asked questions
 
-### What do you need to know about catalog client script scope?
+### Why doesn't my regular Client Script work on a catalog item form?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Standard Client Scripts are scoped to a table (like Incident) and don't run on Service Catalog item forms, which are built from variables rather than table fields. You need a **Catalog Client Script**, attached directly to the catalog item or a variable set, to control variable behaviour.
 
-### What do you need to know about variables vs fields?
+### Can I reference a variable using its table field name?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No. Variables aren't table columns, so you must use the exact **variable name** you defined on the catalog item (for example `g_form.getValue('justification')`), not a label or a guessed database field name. Check the variable's name on the catalog item's Variables tab if you're unsure.
 
-### What do you need to know about g_form in the catalog context?
+### Does a catalog client script work the same way on the Service Portal as in the classic UI?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Mostly yes for `g_form` calls, since Service Portal implements the same client API, but some visual behaviours (like layout reflow) can look different because the portal widget renders variables differently than the classic catalog form. Always test in whichever interface your end users actually use.
 
 ## Discussion and questions
 

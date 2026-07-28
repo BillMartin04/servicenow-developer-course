@@ -27,10 +27,10 @@ GlideRecord is the core server-side API for querying and manipulating records. P
 
 ## Key concepts
 
-- GlideRecord query lifecycle
-- addQuery / addEncodedQuery
-- next() iteration
-- get() by sys_id
+- **GlideRecord query lifecycle** — you build a `GlideRecord` object, add conditions, call `query()` to execute, then loop with `next()`; the query only hits the database once you call `query()`.
+- **addQuery / addEncodedQuery** — `addQuery('priority', 1)` adds a single AND condition; `addEncodedQuery('priority=1^active=true')` applies a full encoded query string copied straight from a filter's breadcrumb.
+- **next() iteration** — after `query()`, `while (gr.next()) { ... }` advances the cursor one matching record at a time; each iteration exposes that record's fields on `gr`.
+- **get() by sys_id** — `gr.get(sysId)` is a shortcut that queries, calls `next()`, and returns `true`/`false` in one step, but it also accepts a field/value pair like `gr.get('number', 'INC0010001')`.
 
 ## Hands-on
 
@@ -38,21 +38,29 @@ GlideRecord is the core server-side API for querying and manipulating records. P
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Query incidents by priority and log the results
+Query the Incident table for all active P1 incidents and log their numbers.
+
+- [ ] In Scripts - Background, create a `GlideRecord('incident')`
+- [ ] Add `addQuery('priority', 1)` and `addQuery('active', true)`
+- [ ] Call `query()`, then loop with `while (gr.next())`
+- [ ] Log `gr.getValue('number')` for each match with `gs.info()`
+- [ ] Pick one returned sys_id and confirm `gr.get(sysId)` returns the same record
+
+**Done when:** the log lists the numbers of every active P1 incident, and re-running after closing one shows one fewer result.
 
 ## Frequently asked questions
 
-### What do you need to know about gliderecord query lifecycle?
+### When should I use addQuery vs addEncodedQuery?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Use `addQuery()` when building conditions programmatically field by field, since it's readable and safe from typos in operators. Use `addEncodedQuery()` when you've copied a query string directly from a list's breadcrumb or filter, especially for complex OR logic, but always validate encoded strings from user input since they aren't automatically sanitized like chained `addQuery()` calls.
 
-### What do you need to know about addquery / addencodedquery?
+### Why does gr.getValue('number') return a string instead of a number?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+`GlideRecord` fields are wrapped in a `GlideElement`, and `getValue()` always returns the underlying database value as a plain string, even for integer or numeric fields. If you need to do arithmetic, explicitly convert with `parseInt()` or `parseFloat()` first.
 
-### What do you need to know about next iteration?
+### What's the difference between query() and get()?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+`query()` executes whatever conditions you've added and requires a `while (gr.next())` loop to step through possibly many results. `get()` is built for the common case of fetching exactly one record by sys_id (or a unique field), combining the query, the first `next()`, and a boolean success check into a single call.
 
 ## Discussion and questions
 

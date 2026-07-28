@@ -27,10 +27,10 @@ UI Policies declaratively control visibility, mandatory, and read-only field sta
 
 ## Key concepts
 
-- UI Policy vs client script
-- Conditions and actions
-- Reverse-if-false behaviour
-- When to script a UI Policy
+- **UI Policy vs client script** — a UI Policy is a declarative, form-based way to change field visibility, mandatory, or read-only state, while a client script requires JavaScript for the same or more complex behaviour; UI Policies are preferred when no custom logic is needed.
+- **Conditions and actions** — the condition builder decides when the policy applies (e.g. "Category is Hardware"), and the actions tab sets the resulting field states (visible, mandatory, read-only) for one or more fields.
+- **Reverse-if-false behaviour** — when checked, ServiceNow automatically reverts the field states back to their original values the moment the condition stops being true, so you don't need a second policy to undo the change.
+- **When to script a UI Policy** — use the optional "Execute if true"/"Execute if false" script fields when the built-in condition/action model can't express what you need, such as looping over multiple related fields or comparing two field values.
 
 ## Hands-on
 
@@ -38,22 +38,28 @@ UI Policies declaratively control visibility, mandatory, and read-only field sta
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Build a UI Policy that hides a field based on a choice
-- [ ] Make a field mandatory conditionally
+Build a UI Policy on the Incident form that reacts to Category.
+
+- [ ] Create a UI Policy on **Incident** with the condition "Category is Hardware"
+- [ ] Add an action that makes **Configuration item** mandatory when the condition is true
+- [ ] Enable **Reverse if false** and confirm the field becomes optional again when you change Category away from Hardware
+- [ ] Add a second UI Policy that hides the **Subcategory** field when Category is empty
+
+**Done when:** selecting Hardware makes Configuration item mandatory, switching to another category reverts it automatically, and clearing Category hides Subcategory.
 
 ## Frequently asked questions
 
-### What do you need to know about ui policy vs client script?
+### Why isn't my UI Policy action reverting when the condition becomes false?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Check that **Reverse if false** is enabled on the UI Policy record. Without it, ServiceNow only applies your actions when the condition is true and leaves the field in whatever state it was in otherwise, which looks like the policy "getting stuck."
 
-### What do you need to know about conditions and actions?
+### Should I use a UI Policy or a Client Script for a mandatory field?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Use a UI Policy whenever the requirement is a straightforward condition-to-state mapping, since it needs no code and is easier for other admins to read. Only drop down to a Client Script if the mandatory logic depends on something a UI Policy condition can't express, like a calculation across multiple fields.
 
-### What do you need to know about reverse-if-false behaviour?
+### Do UI Policies run on the client, the server, or both?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+UI Policies run primarily on the client (in the browser) so the form updates instantly without a round trip, but ServiceNow also enforces the same mandatory/read-only state server-side on save as a safety net. This is why a hidden mandatory field can still block a save if it wasn't populated.
 
 ## Discussion and questions
 

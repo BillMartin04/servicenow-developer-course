@@ -27,9 +27,9 @@ A centralised error-handling strategy for consistent logging and graceful failur
 
 ## Key concepts
 
-- Try/catch patterns
-- Central error logger Script Include
-- Surfacing errors to users and admins
+- **Try/catch patterns** — wrap risky operations (REST calls, JSON.parse, GlideRecord updates that can fail) in `try/catch` at the point where they happen, then hand the caught error to a central handler instead of letting it bubble up as an unhandled exception.
+- **Central error logger Script Include** — a single Script Include (for example `GlobalErrorHandler`) provides one method every other script calls on failure, so every log entry has the same structure: source, message, and context, instead of ad-hoc `gs.error()` calls scattered across the codebase.
+- **Surfacing errors to users and admins** — the handler should log full technical detail (stack trace, input values, source script) to the system log for admins via `gs.error()`, while returning a short, safe, non-technical message to the end user or calling script — never expose internal error detail directly to the client.
 
 ## Hands-on
 
@@ -37,21 +37,29 @@ A centralised error-handling strategy for consistent logging and graceful failur
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Build a GlobalErrorHandler Script Include and use it everywhere
+Build a shared error-handling Script Include and use it from another script.
+
+- [ ] Create a `GlobalErrorHandler` Script Include with a method like `logError(source, error, context)`
+- [ ] Inside it, call `gs.error()` with a consistent format that includes the source name and context
+- [ ] Have the method return a plain result object such as `{ success: false, message: 'A friendly error message' }` rather than throwing
+- [ ] In a second Script Include, wrap a risky call (e.g. `JSON.parse` on bad input) in `try/catch` and call `GlobalErrorHandler` from the `catch` block
+- [ ] Trigger the failure path and confirm the system log shows the detailed error while the caller only receives the friendly message
+
+**Done when:** the system log (`gs.error()` output) shows the source and context for the failure, and the calling script receives a clean `{ success: false, message: ... }` object instead of an uncaught exception.
 
 ## Frequently asked questions
 
-### What do you need to know about try/catch patterns?
+### Why centralize error handling instead of just using try/catch everywhere?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Scattering `try/catch` blocks with inconsistent logging makes it hard to search logs or spot patterns across the instance. A central error-handler Script Include gives every failure the same shape and destination, so admins can search one log source and get consistent context (source script, message, related record) every time.
 
-### What do you need to know about central error logger script include?
+### Should the error handler ever throw the original exception back up?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Generally no — a gateway-style handler should return a predictable result object (like `{ success: false, message: ... }`) so calling code can check a flag instead of needing its own `try/catch` for every call. Re-throwing raw errors defeats the purpose of centralizing handling and risks leaking technical detail to the client.
 
-### What do you need to know about surfacing errors to users and admins?
+### What's the difference between what I log and what I show the user?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+The system log via `gs.error()` should capture full technical detail — stack trace, input values, table/record context — because that's what admins need to debug. The message returned to the user or UI should be short and non-technical, since exposing raw error text or stack traces to end users is both confusing and a potential information leak.
 
 ## Discussion and questions
 

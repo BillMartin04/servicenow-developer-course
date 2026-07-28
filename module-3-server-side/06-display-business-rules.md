@@ -27,9 +27,9 @@ Display business rules run before a form loads and pass server data to the clien
 
 ## Key concepts
 
-- Display rule timing
-- g_scratchpad pattern
-- Passing server data to client scripts safely
+- **Display rule timing** — a Display Business Rule runs server-side while the form is loading, before the page renders on the client, which makes it the right place to fetch data the client script will need on `onLoad`.
+- **g_scratchpad pattern** — inside a Display rule you attach data with `g_scratchpad.myValue = current.getValue('priority')`, and that same `g_scratchpad` object becomes available as a plain client-side object once the form finishes loading.
+- **Passing server data to client scripts safely** — only put non-sensitive data on `g_scratchpad`, since it's readable in the page's rendered HTML/JS by anyone with browser access to the form, unlike a server-only ACL-checked field.
 
 ## Hands-on
 
@@ -37,21 +37,29 @@ Display business rules run before a form loads and pass server data to the clien
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Set a g_scratchpad value and read it in a client script
+Push a server-calculated value to the client with g_scratchpad and read it on form load.
+
+- [ ] Create a **Display** Business Rule on `incident` (before, Display checkbox on)
+- [ ] In the script, set `g_scratchpad.callerVip = current.caller_id.vip` (or another server-known value)
+- [ ] Create a client script (**onLoad**) on the same table
+- [ ] In the client script, read `g_scratchpad.callerVip` and show it with `g_form.addInfoMessage()`
+- [ ] Open an incident record and confirm the message appears immediately on load with no extra round-trip
+
+**Done when:** opening the incident form shows the info message populated from `g_scratchpad` with no visible delay, confirming the Display rule ran and populated the value before the client `onLoad` script executed.
 
 ## Frequently asked questions
 
-### What do you need to know about display rule timing?
+### Why use a Display Business Rule instead of just calling GlideAjax from the client script?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+A Display rule runs during the initial form load and delivers its data with zero extra round-trips, since it's baked into the same page load that renders the form. `GlideAjax` requires a separate asynchronous call after the page has already loaded, which is more flexible for on-demand lookups but introduces a visible delay or extra complexity if you just need a value the moment the form opens.
 
-### What do you need to know about g_scratchpad pattern?
+### Can I put any server data on g_scratchpad?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Technically yes, but you shouldn't put anything sensitive there, because `g_scratchpad` values are rendered into the client-side page source and are visible to anyone who can view that form, regardless of field-level ACLs. Only pass values the current user is already allowed to see.
 
-### What do you need to know about passing server data to client scripts safely?
+### Why doesn't my onLoad client script see the g_scratchpad value I set?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Check that the Business Rule actually has its **Display** checkbox enabled, not just **before**, since only Display rules populate `g_scratchpad` for the client. Also confirm the property name matches exactly between the Display rule and the client script, since a typo silently returns `undefined` rather than an error.
 
 ## Discussion and questions
 

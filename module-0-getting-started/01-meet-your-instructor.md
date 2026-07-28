@@ -27,9 +27,9 @@ Meet Bill Martin — 22+ years in software engineering and ServiceNow — and un
 
 ## Key concepts
 
-- Instructor background and teaching approach
-- The 'build it the right way' philosophy
-- Who this course is for
+- **Instructor background and teaching approach** — Bill Martin has 22+ years in software engineering and ServiceNow, and teaches by building real, working examples rather than just describing concepts in the abstract.
+- **The 'build it the right way' philosophy** — favour solutions that are maintainable and upgrade-safe (scoped apps, clean scripting, no hacks) over quick fixes that will break on the next ServiceNow release.
+- **Who this course is for** — anyone with basic JavaScript familiarity who wants to go from admin-level knowledge to writing real Client Scripts, Business Rules, and integrations, whether for a job, a promotion, or a client project.
 
 ## Hands-on
 
@@ -37,22 +37,26 @@ Meet Bill Martin — 22+ years in software engineering and ServiceNow — and un
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Introduce yourself in the YouTube community / comments
-- [ ] Set up a note-taking system for the course
+- [ ] Introduce yourself in the YouTube community / comments and say what you want to get out of the course
+- [ ] Set up a note-taking system for the course (a doc, a notebook, or a scoped app record — your choice)
+- [ ] Write one sentence describing what 'build it the right way' means to you
+- [ ] Bookmark the [TechTalk with Bill YouTube channel](https://www.youtube.com/@techtalkwithbill) so you don't miss future lessons
+
+**Done when:** you've posted an introduction, have a note-taking system ready, and know where to find future lessons.
 
 ## Frequently asked questions
 
-### What do you need to know about instructor background and teaching approach?
+### Do I need prior ServiceNow experience to follow this course?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No prior ServiceNow experience is required, but basic JavaScript familiarity helps since Client Scripts and Business Rules are written in JavaScript. The course starts from fundamentals and builds up to advanced scripting.
 
-### What do you need to know about the 'build it the right way' philosophy?
+### What does 'build it the right way' actually mean in practice?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+It means favouring solutions that survive a ServiceNow upgrade and that another developer could maintain — using scoped applications instead of the Global scope, following naming conventions, and avoiding hacks like global client scripts that run on every form. It is the difference between something that works today and something that still works in two years.
 
-### What do you need to know about who this course is for?
+### Is this course only for people who want to become full-time developers?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No. It also suits admins who want to add scripting skills, consultants who need to read and adapt other people's code, and architects who want a refresher on how the underlying platform actually behaves. The skills apply regardless of your exact job title.
 
 ## Discussion and questions
 

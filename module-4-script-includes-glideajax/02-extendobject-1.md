@@ -27,9 +27,9 @@ Learn how ServiceNow implements class inheritance with Object.extendsObject.
 
 ## Key concepts
 
-- Prototype and extendsObject
-- initialize() pattern
-- Inheriting behaviour
+- **Prototype and extendsObject** — `Object.extendsObject(ParentClass, ChildClass)` wires `ChildClass.prototype` to inherit from `ParentClass.prototype`, so an instance of `ChildClass` can call parent methods it never redefined.
+- **initialize() pattern** — `initialize()` is the constructor-equivalent method run when you `new` up a Script Include; a child class inheriting from a base class (or from `AbstractAjaxProcessor`) should generally rely on the parent's `initialize()` rather than defining its own, unless it explicitly calls the parent's version first.
+- **Inheriting behaviour** — once extended, the child automatically gets every method on the parent's prototype for free, so shared logic (like common validation) can live once in the parent and be reused by every child class.
 
 ## Hands-on
 
@@ -37,21 +37,28 @@ Learn how ServiceNow implements class inheritance with Object.extendsObject.
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Create a base Script Include and extend it
+Create a base Script Include and a child that inherits its behaviour without redefining it.
+
+- [ ] Create a Script Include `BaseGreeter` with `Class.create()`, an `initialize()` that sets `this.greeting = 'Hello'`, and a method `greet(name)` returning `this.greeting + ', ' + name`
+- [ ] Create a second Script Include `FormalGreeter` and call `Object.extendsObject(BaseGreeter, FormalGreeter)` right after `Class.create()`
+- [ ] Do NOT define an `initialize()` on `FormalGreeter` — let it inherit the parent's
+- [ ] From Scripts - Background, run `new FormalGreeter().greet('Alex')` and log the result
+
+**Done when:** the log shows `Hello, Alex`, proving `FormalGreeter` inherited both `initialize()` and `greet()` from `BaseGreeter` with zero code duplication.
 
 ## Frequently asked questions
 
-### What do you need to know about prototype and extendsobject?
+### Where does `Object.extendsObject()` actually need to go in the script?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+It goes immediately after `Class.create()` in the child Script Include, before the `prototype` definition: `var Child = Class.create(); Object.extendsObject(Parent, Child); Child.prototype = { ... };`. This wires the prototype chain before any methods are attached.
 
-### What do you need to know about initialize pattern?
+### If I extend a class, do I need to copy its initialize() into my child?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No, and you generally shouldn't. If the child defines no `initialize()`, it automatically uses the parent's. This matters most for client-callable Script Includes extending `AbstractAjaxProcessor` — defining your own `initialize()` there overwrites the parent's, which breaks `getParameter()` and the whole GlideAjax request.
 
-### What do you need to know about inheriting behaviour?
+### What happens to methods the child doesn't define itself?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+JavaScript looks them up the prototype chain: if `ChildClass.prototype` doesn't have a method, it checks `ParentClass.prototype` next. That's why `Object.extendsObject` lets a child call any method the parent defines without rewriting it.
 
 ## Discussion and questions
 

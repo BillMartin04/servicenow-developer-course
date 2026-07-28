@@ -27,10 +27,10 @@ Part 4 covers performance, best practices, and common anti-patterns to avoid in 
 
 ## Key concepts
 
-- Query performance and indexes
-- setWorkflow and autoSysFields
-- Avoiding nested queries
-- Bulk operations
+- **Query performance and indexes** — queries filtering on indexed fields (like `sys_id` or `number`) return far faster than queries on unindexed text fields, so check **System Definition > Indexes** before assuming a slow query is a scripting problem.
+- **setWorkflow and autoSysFields** — `setWorkflow(false)` skips Business Rules and workflows for that write, and `autoSysFields(false)` stops the system from updating `sys_updated_on`/`sys_updated_by`, both useful for bulk data loads where you don't want side effects or audit noise.
+- **Avoiding nested queries** — running a `GlideRecord` query inside a `while (gr.next())` loop of another query multiplies database round-trips and can turn a fast script into a slow one; dot-walking or a single combined query is almost always better.
+- **Bulk operations** — always add `setLimit(n)` while developing a new bulk update or delete script so a logic mistake doesn't touch every row on the table before you've verified it on a small sample.
 
 ## Hands-on
 
@@ -38,21 +38,29 @@ Part 4 covers performance, best practices, and common anti-patterns to avoid in 
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Refactor a slow query using the techniques shown
+Refactor a naive nested-query script into a safer, faster version.
+
+- [ ] In Scripts - Background, write a `GlideRecord('incident')` query that loops with `next()` and, inside the loop, runs a second `GlideRecord` query against `sys_user` for the caller
+- [ ] Rewrite it to dot-walk (`gr.caller_id.name`) instead of the nested query, and compare log output for correctness
+- [ ] Add `setLimit(5)` while testing so you don't process the whole table
+- [ ] Add `gr.setWorkflow(false)` before a test `update()` call and confirm in **Business Rule** logs that no rule fired for that write
+- [ ] Add `gr.autoSysFields(false)` before the same update and confirm `sys_updated_on` did not change
+
+**Done when:** the dot-walked version produces the same caller names as the nested-query version, and you've confirmed both `setWorkflow(false)` and `autoSysFields(false)` suppressed their respective side effects.
 
 ## Frequently asked questions
 
-### What do you need to know about query performance and indexes?
+### Does setWorkflow(false) stop ALL automation on my write?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+It suppresses Business Rules and workflow/flow triggers tied to that specific `insert()` or `update()` call, but it does not bypass ACLs or database constraints. Use it deliberately for bulk data loads where re-running the full automation stack for every row would be slow or cause unwanted side effects like duplicate notifications.
 
-### What do you need to know about setworkflow and autosysfields?
+### Why is my query slow even though the table isn't that big?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+A query filtering on a field without a database index forces a full table scan instead of an indexed lookup, and this gets worse as related tables grow too. Check **System Definition > Indexes**, and also verify you're not running a `GlideRecord` query inside a loop over another query's results, since nested queries multiply the cost.
 
-### What do you need to know about avoiding nested queries?
+### When should I use setLimit() versus just trusting my query conditions?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Use `setLimit()` any time you're developing or testing a new query, especially one that writes or deletes, so a bug in your conditions can't accidentally process the entire table before you notice. Once the logic is verified on a small sample, you can remove the limit or raise it for production use.
 
 ## Discussion and questions
 

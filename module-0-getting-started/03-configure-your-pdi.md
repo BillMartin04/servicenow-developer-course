@@ -48,17 +48,17 @@ This is the setup checklist the entire rest of the course depends on.
 
 ## Frequently asked questions
 
-### What do you need to know about **scripts - background** — a page where you run server-side javascript instantly, without building anything. your primary sandbox for modules 1, 3, and 4?
+### Why can't I see my gs.info() output anywhere?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Most likely Script Log Statements isn't open, or you're looking in the wrong place. Open the **Script Log Statements** module (or System Logs > Script Log Statements) and re-run your script — `gs.info()` output appears there, not in the browser console, since it runs server-side.
 
-### What do you need to know about **session debugging** — turns on client-side and server-side visibility so you can see logs, field changes, and business rule execution?
+### Should I build my course work in the Global scope or a scoped app?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Always use the scoped application (`x_course_lab`) you create in this lesson. Global is unnamespaced and shared, so it's easy to create naming collisions and hard to export cleanly; a scoped app isolates your work and lets you move or back it up with a single export.
 
-### What do you need to know about **script log statements** — where `gs.info ` output from server scripts appears?
+### What's the difference between exporting a scoped app and using an update set?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Both move customizations between instances, but a scoped app export bundles the entire application (all its tables, scripts, and records) as one package, while update sets track individual changes and are typically used for smaller, incremental promotions between instances. For this course, exporting the whole scoped app is simpler and safer against a PDI reset.
 
 ## Discussion and questions
 

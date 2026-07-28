@@ -27,9 +27,9 @@ Dependency injection makes your ServiceNow code testable and loosely coupled.
 
 ## Key concepts
 
-- What DI is and why it matters
-- Constructor injection in Script Includes
-- Decoupling dependencies
+- **What DI is and why it matters** — instead of a class creating its own collaborators with `new` deep inside its methods, the collaborator is passed in from outside, so the class doesn't need to know how to construct it or which concrete implementation it's using.
+- **Constructor injection in Script Includes** — `initialize(dependency)` accepts the dependency as a parameter and defaults to a real implementation when nothing is passed, e.g. `this.repo = dependency || new IncidentRepository();`, so existing callers keep working unchanged.
+- **Decoupling dependencies** — the class only relies on the dependency's public methods (its shape), not on how it's built, which means the dependency can be swapped for a different real implementation or a fake without touching the class's own logic.
 
 ## Hands-on
 
@@ -37,21 +37,29 @@ Dependency injection makes your ServiceNow code testable and loosely coupled.
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Inject a dependency into a Script Include constructor
+Build a Script Include that accepts its dependency through `initialize()` with a real default.
+
+- [ ] Create a Script Include `IncidentNotifier` with `initialize(repository)` that sets `this.repository = repository || new IncidentRepository();`
+- [ ] Implement `IncidentRepository` with a method `getActiveCount()` that returns a `GlideAggregate` count of active incidents
+- [ ] Add a method `getSummary()` on `IncidentNotifier` that calls `this.repository.getActiveCount()` and returns a formatted string
+- [ ] From Scripts - Background, call `new IncidentNotifier().getSummary()` with no argument so it uses the real default
+- [ ] Call `new IncidentNotifier(new IncidentRepository())` explicitly and confirm the result matches
+
+**Done when:** both calls return the same active incident count, proving the default dependency behaves identically to an explicitly passed one.
 
 ## Frequently asked questions
 
-### What do you need to know about what di is and why it matters?
+### Why default the dependency to a real implementation instead of requiring it every time?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Defaulting with `this.repo = dependency || new IncidentRepository();` means existing callers that just do `new IncidentNotifier()` keep working exactly as before, while tests or advanced callers can still pass in a specific instance. It avoids a breaking change when you introduce DI into an existing class.
 
-### What do you need to know about constructor injection in script includes?
+### Isn't this just adding an extra parameter for no real benefit?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+The benefit shows up in testing and reuse: once the dependency is injected rather than hardcoded, you can substitute a fake object in a test that returns a known value instead of hitting the real `GlideAggregate` query. Without injection, you're stuck testing against live data every time.
 
-### What do you need to know about decoupling dependencies?
+### Does dependency injection require a special ServiceNow framework or plugin?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No. This pattern is plain JavaScript using the existing `Class.create()` and `initialize()` mechanism — no additional plugin or framework is needed. It's a coding convention, not a platform feature.
 
 ## Discussion and questions
 

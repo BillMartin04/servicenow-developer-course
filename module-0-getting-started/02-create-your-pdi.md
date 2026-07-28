@@ -53,17 +53,17 @@ Complete all of these before moving on.
 
 ## Frequently asked questions
 
-### What do you need to know about **what a pdi is** — a personal, non-production servicenow instance for learning and building, with full admin access?
+### What happens if my PDI hibernates while I'm mid-lesson?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Nothing is lost. Go back to the ServiceNow Developer Portal, find your instance, and click **Wake Instance**. It typically takes a minute or two to come back online, then you can log in and continue exactly where you left off.
 
-### What do you need to know about **free and self-service** — requested from the servicenow developer portal in a few minutes, no cost and no licence needed?
+### What is the difference between hibernation and reclamation?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Hibernation is temporary: the instance sleeps after around 10 days of inactivity and you wake it on demand. Reclamation is permanent: if a PDI stays hibernated for too long without being woken, ServiceNow may delete it entirely, and you would need to request a brand-new instance and rebuild or re-import your work.
 
-### What do you need to know about **hibernation** — an unused pdi goes to sleep after roughly 10 days of inactivity. you wake it from the developer portal in a minute or two?
+### Which release family should I pick when requesting a PDI?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Always choose the newest generally available release. ServiceNow adds and deprecates APIs with each release, so learning on the latest version keeps what you practice relevant to current job requirements and avoids confusion from outdated documentation.
 
 ## Discussion and questions
 

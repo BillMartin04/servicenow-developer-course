@@ -27,9 +27,9 @@ Bridge low-code and pro-code by calling Script Includes from Flow Designer custo
 
 ## Key concepts
 
-- Custom action inputs/outputs
-- Script step calling a Script Include
-- Returning data to the flow
+- **Custom action inputs/outputs** — you declare typed input variables (e.g. a table reference or string) and output variables on the action, and those are the only values available inside the script step and the only values a flow can consume afterward.
+- **Script step calling a Script Include** — inside the action's script step, instantiate your Script Include (e.g. `new MyUtility()`) and call a plain server-side method on it, keeping the actual logic in the Script Include so it stays testable and reusable outside of Flow Designer.
+- **Returning data to the flow** — assign results to the action's output variables (for example `outputs.result = value;`) rather than using `return`, since Flow Designer reads the declared outputs object, not a function return value, to pass data to the next step in the flow.
 
 ## Hands-on
 
@@ -37,21 +37,29 @@ Bridge low-code and pro-code by calling Script Includes from Flow Designer custo
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Build a custom action that calls your utility Script Include
+Build a custom action that wraps a utility Script Include and exposes its result to a flow.
+
+- [ ] Create a simple Script Include (e.g. one method that takes a string and returns an uppercased version)
+- [ ] Create a Flow Designer custom action with one string input and one string output
+- [ ] In the action's script step, call your Script Include's method with the input variable
+- [ ] Assign the returned value to the action's output variable
+- [ ] Build a test flow that calls the custom action and logs the output with a Log step
+
+**Done when:** running the test flow shows the transformed value in the flow's execution log, matching what the Script Include method would return when called directly in Scripts - Background.
 
 ## Frequently asked questions
 
-### What do you need to know about custom action inputs/outputs?
+### Why put logic in a Script Include instead of writing it directly in the script step?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Code inside a Script Include can be unit-tested from Scripts - Background, reused by other actions, business rules, or GlideAjax calls, and is easier to read in source control. The script step should stay thin — just map inputs to the Script Include call and map the result to outputs.
 
-### What do you need to know about script step calling a script include?
+### Why doesn't my custom action return data with a normal return statement?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Flow Designer script steps don't use the function's return value; they read whatever you assigned onto the action's declared `outputs` object during execution. If an output variable is never assigned, it stays empty even if your script logic technically "returns" something internally.
 
-### What do you need to know about returning data to the flow?
+### Can a custom action's script step call a client-callable Script Include?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+It should call a normal server-side Script Include, not one built for GlideAjax. Custom actions execute entirely on the server, so there's no need for (and no benefit to) an `AbstractAjaxProcessor`-based include, which is designed for client-to-server calls.
 
 ## Discussion and questions
 

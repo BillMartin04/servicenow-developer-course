@@ -27,9 +27,9 @@ Part 2 covers inserting, updating, and deleting records safely with GlideRecord.
 
 ## Key concepts
 
-- insert / update / deleteRecord
-- setValue and setLimit
-- Write operations and ACLs
+- **insert / update / deleteRecord** — `insert()` creates a new row and returns its sys_id, `update()` saves changes on a record loaded via `get()`/`next()`, and `deleteRecord()` removes the current record from the table.
+- **setValue and setLimit** — `setValue('field', value)` stages a field change without immediately writing to the database, while `setLimit(n)` caps how many records a query returns, which is unrelated to writes but easy to confuse with them.
+- **Write operations and ACLs** — every `insert()`, `update()`, and `deleteRecord()` call is still subject to the table's write ACLs for the running user, so a script can silently fail to save if the user lacks permission unless you check the return value or use `setForceUpdate(true)` deliberately.
 
 ## Hands-on
 
@@ -37,21 +37,29 @@ Part 2 covers inserting, updating, and deleting records safely with GlideRecord.
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Insert a test record then update it via script
+Create, modify, and remove a test incident entirely through script.
+
+- [ ] In Scripts - Background, create a `GlideRecord('incident')`, `setValue()` a short description, then call `insert()` and log the returned sys_id
+- [ ] Use `get(sysId)` to load that record back, `setValue()` the priority to a new value, and call `update()`
+- [ ] Query for the record again and `gs.info()` its priority to confirm the update saved
+- [ ] Call `deleteRecord()` on that record
+- [ ] Query for the sys_id again and confirm `get()` now returns `false`
+
+**Done when:** you've logged the sys_id after insert, confirmed the updated priority value, and confirmed the record no longer exists after `deleteRecord()`.
 
 ## Frequently asked questions
 
-### What do you need to know about insert / update / deleterecord?
+### Why doesn't my update() call seem to save anything?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+The most common cause is calling `setValue()` on a `GlideRecord` that was never loaded with `get()`, `next()`, or a completed `query()`, so there's no existing row to update. Also check the return value of `update()` and the System Log for ACL-related security warnings, since a failed write due to insufficient access often fails silently rather than throwing an error.
 
-### What do you need to know about setvalue and setlimit?
+### Should I use setValue() or direct dot-notation assignment like gr.short_description = 'x'?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Both work and end up calling the same underlying setter, but `setValue('field', value)` is the safer habit because it avoids accidentally overwriting the whole `GlideElement` object instead of just its value, which can happen with careless dot-notation on some field types. Stick to `setValue()` consistently so your write behavior is predictable across field types like reference and choice fields.
 
-### What do you need to know about write operations and acls?
+### What happens to Business Rules when I call insert(), update(), or deleteRecord()?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+By default, all matching before/after/async Business Rules on the table fire normally, just as if a user had saved the form. If you need to skip that automation for a specific script-driven write, call `setWorkflow(false)` before the operation, which suppresses Business Rules (and workflows) for that write only.
 
 ## Discussion and questions
 

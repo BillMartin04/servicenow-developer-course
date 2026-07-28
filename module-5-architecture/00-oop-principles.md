@@ -27,9 +27,9 @@ Apply OOP principles — encapsulation, inheritance, polymorphism, SOLID — ins
 
 ## Key concepts
 
-- Encapsulation and cohesion
-- SOLID in ServiceNow scripting
-- Designing maintainable Script Includes
+- **Encapsulation and cohesion** — a Script Include should hide its internal fields behind methods and expose only what callers need; a cohesive class has one clear job, so unrelated logic (e.g. notification formatting inside a pricing calculator) belongs in a separate class.
+- **SOLID in ServiceNow scripting** — the Single Responsibility Principle matters most day-to-day: if a Script Include's name needs "and" to describe it (e.g. `ValidateAndNotify`), it is doing two jobs and should be split so each class has one reason to change.
+- **Designing maintainable Script Includes** — favour small classes with a narrow public API, low coupling (few hard dependencies on other classes) and high cohesion (related methods grouped together), so a future change only touches one file.
 
 ## Hands-on
 
@@ -37,21 +37,28 @@ Apply OOP principles — encapsulation, inheritance, polymorphism, SOLID — ins
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Refactor a procedural script into a cohesive class
+Refactor a procedural Script Include so it follows single responsibility and hides its internal state.
+
+- [ ] Create a Script Include `IncidentPriorityCalculator` with a public method `calculatePriority(impact, urgency)`
+- [ ] Move the priority lookup logic into a private helper method (prefix with `_`) instead of inlining it in `calculatePriority`
+- [ ] Store any lookup table (e.g. impact/urgency matrix) as a variable set in `initialize()`, not hardcoded inside the method
+- [ ] Call the class from Scripts - Background and log the returned priority for a few impact/urgency combinations
+
+**Done when:** `calculatePriority()` returns the correct priority for each combination and none of the calling code needs to know how the lookup is implemented internally.
 
 ## Frequently asked questions
 
-### What do you need to know about encapsulation and cohesion?
+### What is the difference between cohesion and coupling?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Cohesion is about how focused a single class is — a highly cohesive Script Include does one job well. Coupling is about how much one class depends on the internals of another. You want high cohesion within classes and low coupling between them, so changing one Script Include rarely forces changes elsewhere.
 
-### What do you need to know about solid in servicenow scripting?
+### How does encapsulation actually work in a Script Include, since JavaScript has no `private` keyword?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+ServiceNow's `Class.create()` pattern doesn't enforce true privacy, but the convention is to prefix internal helper methods and variables with an underscore (e.g. `_buildQuery`) and document them as "not part of the public API." Callers are expected to only use the non-underscore methods, even though nothing technically blocks them from calling the rest.
 
-### What do you need to know about designing maintainable script includes?
+### Why does Single Responsibility matter if the script still works fine as one big class?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+A single large class still "works" until two people need to change different behaviors at the same time, or a bug fix in one area breaks unrelated functionality. Splitting by responsibility means each class has one reason to change, which makes testing, code review, and reuse much easier as the app grows.
 
 ## Discussion and questions
 

@@ -27,10 +27,10 @@ Client scripts control form behaviour in the browser. Learn onLoad, onChange, on
 
 ## Key concepts
 
-- The four client script types
-- g_form and g_user APIs
-- onChange field arguments
-- Performance best practices
+- **The four client script types** — `onLoad` runs when the form finishes loading, `onChange` runs when a specific field's value changes, `onSubmit` runs just before the form is submitted (and can cancel it), and `onCellEdit` runs when a value changes in a list's inline editor.
+- **g_form and g_user APIs** — `g_form` reads and writes form state in the browser, such as `g_form.setValue()`, `g_form.getValue()`, and `g_form.setMandatory()`; `g_user` exposes read-only info about the logged-in user, like `g_user.hasRole('itil')` and `g_user.userID`.
+- **onChange field arguments** — an `onChange` function receives `(control, oldValue, newValue, isLoading, isTemplate)`, and you should return early when `isLoading` is true or `newValue` is empty to avoid firing logic unnecessarily.
+- **Performance best practices** — avoid `GlideRecord` queries inside client scripts, keep onChange logic lightweight since it fires on every keystroke-triggered change, and prefer GlideAjax for anything that needs server data.
 
 ## Hands-on
 
@@ -38,22 +38,28 @@ Client scripts control form behaviour in the browser. Learn onLoad, onChange, on
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Create an onChange client script that shows a message
-- [ ] Add an onLoad script that sets a default value
+Build a small set of client scripts on the Incident form to control field behaviour without touching the server.
+
+- [ ] Create an `onChange` Client Script on **Category** that calls `g_form.setValue('impact', '1')` when Category is "Network"
+- [ ] Create an `onLoad` Client Script that sets **Urgency** to a default value only when the form is new (`g_form.isNewRecord()`)
+- [ ] Add an `onSubmit` Client Script that blocks submission with `g_form.addErrorMessage()` if Short Description is under 10 characters
+- [ ] Confirm the `isLoading` guard works by reloading the form and checking your onChange logic doesn't fire on load
+
+**Done when:** changing Category to "Network" auto-sets Impact, a new incident gets a default Urgency, and submitting with a short description shows your custom error.
 
 ## Frequently asked questions
 
-### What do you need to know about the four client script types?
+### Why does my onChange script fire when the form first loads, not just when the user changes the field?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+This happens when you don't check the `isLoading` parameter. ServiceNow calls `onChange` once during form load to sync initial state, so always add `if (isLoading || newValue === '') { return; }` at the top of the function if you only want the logic to run on genuine user edits.
 
-### What do you need to know about g_form and g_user apis?
+### When should I use a Client Script instead of a UI Policy?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Use a UI Policy for simple, declarative field state changes like show/hide, mandatory, or read-only based on conditions — it's faster to build and easier to maintain. Reach for a Client Script when you need custom logic, such as calling `g_form.addErrorMessage()`, manipulating multiple fields conditionally, or calling GlideAjax to the server.
 
-### What do you need to know about onchange field arguments?
+### Can I query the database directly from a Client Script?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+You can use `GlideRecord` in a Client Script, but it runs as a synchronous, blocking browser call and is strongly discouraged for performance reasons. Use a **GlideAjax** call to a Script Include instead, which runs the query on the server and returns just the data you need.
 
 ## Discussion and questions
 

@@ -105,6 +105,26 @@ Run every snippet in **Scripts - Background** in your PDI and read the log outpu
 - [ ] Build an object, add two properties, and log it with `JSON.stringify()`
 - [ ] Demonstrate truthiness: log whether `''`, `'0'`, `0`, and `[]` are truthy
 
+## Frequently asked questions
+
+### Why does `gr.getValue('priority')` return `'1'` and not `1`?
+
+GlideRecord returns field values as **strings**, always. That means `gr.getValue('priority') == 1` is true (loose equality coerces) but `gr.getValue('priority') === 1` is false. When you need a real number for maths or strict comparison, wrap it in `parseInt(value, 10)`.
+
+### Can I use `let`, `const`, and arrow functions in ServiceNow scripts?
+
+In **client scripts** yes — they run in the browser, which supports modern JavaScript. **Server-side**, the classic engine is ES5-based; newer releases can enable modern syntax via an instance mode, but it is not guaranteed everywhere. The safe default for portable server code is `var` and `function` declarations.
+
+### What is the fastest way to inspect an object while debugging?
+
+Log it with `gs.info(JSON.stringify(obj))` on the server, or `console.log(JSON.stringify(obj))` on the client. Plain `gs.info(obj)` often prints `[object Object]`; stringifying shows you the actual structure and values.
+
+## Discussion and questions
+
+Have a question or want to share your progress? Post a comment under the course videos and the instructor will reply.
+
+[Join the discussion on YouTube](https://www.youtube.com/@techtalkwithbill)
+
 ## Resources
 
 - [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
@@ -113,6 +133,8 @@ Run every snippet in **Scripts - Background** in your PDI and read the log outpu
 - [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
 - Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
----
-<!--NAV-->
+## Continue the course
+
 [← Configure Your PDI for Development](../module-0-getting-started/03-configure-your-pdi.md) · [Where Scripts Run: Client vs Server →](01-where-scripts-run.md)
+
+Back to: [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg) | [Course home](../README.md) | [Full syllabus](../syllabus.md)

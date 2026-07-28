@@ -27,8 +27,9 @@ Part 2 shows a fuller DI implementation and a simple service container pattern.
 
 ## Key concepts
 
-- Service container concept
-- Registering and resolving services
+- **Substituting a fake dependency** — because `initialize(dependency)` accepts any object with the right method shape, you can pass in a plain object with a stubbed method (e.g. `{ getActiveCount: function() { return 5; } }`) instead of the real repository when you want predictable output.
+- **Verifying behaviour with a fake** — a fake lets you assert on the class's own logic (formatting, branching, thresholds) in isolation, because the fake's return value is fixed and known, unlike a live `GlideRecord` query whose result depends on current data.
+- **When a fake is worth the extra code** — write one when the real dependency is slow, has side effects (sends an email, calls an external API), or the input data is hard to set up reliably; skip it for simple, cheap operations where hitting the real dependency in Scripts - Background is just as easy.
 
 ## Hands-on
 
@@ -36,21 +37,29 @@ Part 2 shows a fuller DI implementation and a simple service container pattern.
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Build a minimal service registry Script Include
+Substitute a fake `IncidentRepository` into `IncidentNotifier` from the previous lesson and verify its formatting logic.
+
+- [ ] Reuse the `IncidentNotifier` Script Include with `initialize(repository)` from Part 1
+- [ ] In Scripts - Background, define a fake object `var fakeRepo = { getActiveCount: function() { return 42; } };`
+- [ ] Call `new IncidentNotifier(fakeRepo).getSummary()` and log the result
+- [ ] Confirm the summary text correctly embeds the number 42 without querying the real Incident table
+- [ ] Change the fake to return `0` and confirm the summary text changes appropriately (e.g. a "no active incidents" phrasing if your logic branches on zero)
+
+**Done when:** the logged summary always reflects exactly what the fake returns, proving `IncidentNotifier`'s formatting logic works independently of real incident data.
 
 ## Frequently asked questions
 
-### What do you need to know about service container concept?
+### What exactly counts as a "fake" dependency in ServiceNow scripting?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+A fake is any plain JavaScript object or lightweight class that implements the same method names the real dependency exposes, but returns fixed, predictable values instead of querying the database. It doesn't need to be a formal mocking library — a simple object literal with stub methods is usually enough.
 
-### What do you need to know about registering and resolving services?
+### Why not just test against real data in the Incident table instead of faking it?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Real data changes over time, so a test that passes today might fail tomorrow simply because incidents were closed or created. A fake keeps the input fixed, so you're only verifying your class's own logic, not the current state of the table.
 
-### What is the main goal of this lesson?
+### Do I need to change the class under test to support fakes?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+No, provided the class already accepts its dependency through `initialize()` as covered in Part 1. If a dependency is instead hardcoded with `new` inside a method, you'd need to refactor it to accept an injected value first before a fake can be substituted.
 
 ## Discussion and questions
 

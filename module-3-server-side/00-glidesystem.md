@@ -27,10 +27,10 @@ GlideSystem (gs) is your gateway to server-side utilities: logging, users, dates
 
 ## Key concepts
 
-- gs logging methods
-- User and role checks
-- Date/time helpers
-- System properties and messages
+- **gs logging methods** — `gs.info()`, `gs.warn()`, and `gs.error()` write to the system log (`syslog`) with different severity levels, so you can filter noisy info messages from real errors.
+- **User and role checks** — `gs.getUserID()`, `gs.getUserName()`, and `gs.getUser().getName()` return details about the session's current user, while `gs.hasRole('admin')` checks role membership for access decisions.
+- **Date/time helpers** — `gs.now()`, `gs.nowDateTime()`, and `gs.daysAgo()` return GlideSystem-formatted date strings in the instance's time zone, sparing you from manual `Date` object handling.
+- **System properties and messages** — `gs.getProperty('key')` reads a `sys_properties` value at runtime, and `gs.addInfoMessage()` / `gs.addErrorMessage()` surface a message banner to the user on the next page load.
 
 ## Hands-on
 
@@ -38,21 +38,29 @@ GlideSystem (gs) is your gateway to server-side utilities: logging, users, dates
 Complete these in your Personal Developer Instance (PDI).
 {% endhint %}
 
-- [ ] Use gs.info, gs.getUser, and gs.getProperty in Background Scripts
+Use gs to log a message that mixes logging, user info, dates, and a system property.
+
+- [ ] In Scripts - Background, get the current user's name with `gs.getUserName()`
+- [ ] Get the current date/time with `gs.nowDateTime()`
+- [ ] Read a known property, e.g. `gs.getProperty('glide.servlet.uri')`
+- [ ] Combine all three into one `gs.info()` message
+- [ ] Change the message to `gs.error()` and confirm it appears with error severity in the System Log
+
+**Done when:** your log entry shows the current user, the current date/time, and the property value on one line, and you can see the severity change between the `gs.info()` and `gs.error()` entries in **System Logs > System Log**.
 
 ## Frequently asked questions
 
-### What do you need to know about gs logging methods?
+### What's the difference between gs.info(), gs.warn(), and gs.error()?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+They write to the same system log but tag entries with different severity levels, which controls how they're filtered and highlighted in **System Logs > System Log**. Use `gs.error()` only for genuine failures you want to stand out during triage, and `gs.info()` for routine trace output during development.
 
-### What do you need to know about user and role checks?
+### Why does gs.getUser() sometimes return unexpected values in a background script?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Background scripts run as whichever user is currently logged in in the UI session you launched them from, so `gs.getUser()` reflects that session, not necessarily an admin or the record's owner. If you need consistent, user-independent behavior, don't rely on the current session's identity in scheduled jobs or Script Includes meant to run as system.
 
-### What do you need to know about date/time helpers?
+### When should I use a system property instead of hardcoding a value?
 
-_Use the video and the overview above to answer this. Reviewing these questions reinforces the key concepts of this lesson._
+Use `gs.getProperty()` whenever a value might change between environments (dev, test, prod) or needs to be adjustable without a code change, such as a threshold, email address, or feature flag. Hardcoded values force you to edit and re-test scripts every time the value changes, while a `sys_properties` record can be updated by an admin instantly.
 
 ## Discussion and questions
 
