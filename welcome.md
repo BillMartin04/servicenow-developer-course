@@ -24,6 +24,24 @@ You are in the right place if you are any of these:
 - **It ends in a graded project.** Module 7 is a full, layered application you build and score against a [rubric](module-7-capstone/01-scoring-rubric.md), so you finish with a portfolio piece you can defend in an interview.
 - **It is completely free and open.** No paywall on the videos, the writing, or the code.
 
+## More than development — this makes you AI-ready
+
+This is the most important reason to take this course.
+
+AI can now generate ServiceNow code in seconds — Script Includes, Business Rules, GlideRecord queries, whole integrations. But **AI-generated code is only as trustworthy as the person reviewing it.** Ask an AI to build on the Now Platform without understanding the fundamentals, and you get code that *looks* right, runs in a demo, and then fails in production: queries with no ACL enforcement, client-callable Script Includes that break their parent class, synchronous calls that freeze the browser, integrations with no error handling.
+
+{% hint style="danger" %}
+**Without these foundations, the correctness of any AI build is a gamble.** You cannot direct, review, or trust what you cannot understand. This course gives you exactly the judgment AI cannot supply — so you can tell right from wrong, safe from risky, and maintainable from throwaway.
+{% endhint %}
+
+That is what "AI-ready" means here. It is not a buzzword bolted on at the end — it is the whole point of the architecture layer:
+
+- **You become the reviewer AI needs.** Clean layers, reusable Script Includes, injected dependencies, and consistent error handling are exactly the properties that let AI assistants extend an application *without breaking it* — and you will know how to demand and verify them.
+- **You direct the AI instead of hoping.** You will describe the pattern you want, spot where the AI got it wrong, and fix it — because you have built it yourself first.
+- **Good architecture is now an AI-readiness requirement, not a style preference.** The same fundamentals that make code maintainable for humans are what make it safe for AI agents to work on.
+
+By the end of this course you will not just build on ServiceNow — you will be the person who can confidently lead, review, and correct AI-assisted development on the platform. That is the difference between shipping and shipping something that breaks.
+
 ## What you will be able to do by the end
 
 Write platform-safe JavaScript, build client- and server-side behaviour, package logic into reusable Script Includes, apply professional design patterns (dependency injection, event-driven, service bus), integrate securely over REST, and deliver a production-quality application you can explain layer by layer. The full list is on the [Course Objectives](objectives.md) page.

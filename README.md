@@ -2,6 +2,8 @@
 
 Welcome to the **ServiceNow Developer Course** — a free, open-source learning path that takes you from writing your first line of JavaScript to designing production-grade platform architecture, taught by [TechTalk with Bill](https://www.youtube.com/@techtalkwithbill).
 
+This course goes beyond development. Its deeper purpose is to make you **AI-ready**: AI can now generate ServiceNow code in seconds, but without solid foundations you cannot tell whether that code is correct, safe, or maintainable. The fundamentals you build here are what let you confidently **direct, review, and trust** AI-assisted development instead of shipping builds that quietly break.
+
 {% embed url="https://www.youtube.com/watch?v=fXbSNOMOj7M" %}
 
 ## What this course is
@@ -23,7 +25,7 @@ ServiceNow certifies administrators, developers, and implementation specialists 
 | 5 · AI-ready architect | You architect platforms AI agents can safely work on | [Module 7](module-7-capstone/README.md) |
 
 {% hint style="info" %}
-**Why "AI-ready" matters.** Clean layers, reusable Script Includes, injected dependencies, and consistent error handling are exactly the properties that let AI coding assistants and platform agents extend your application without breaking it. Good architecture is now an AI-readiness requirement, not a style preference.
+**Why "AI-ready" matters — and why it is the whole point.** AI can generate ServiceNow code in seconds, but it cannot tell you whether that code is correct, safe, or maintainable — only you can. Without these foundations, the correctness of any AI build is a gamble: it may look right, pass a demo, then fail in production. The fundamentals in this course are exactly what let you **direct, review, and trust** AI-assisted development instead of shipping something that breaks. Clean layers, reusable Script Includes, injected dependencies, and consistent error handling are also the properties that let AI assistants extend your application *without* breaking it. Good architecture is now an AI-readiness requirement, not a style preference.
 {% endhint %}
 
 ## Start here — in this order
