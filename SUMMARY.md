@@ -77,3 +77,9 @@
   * [7.3 Submit Your Work for Verification](module-7-capstone/02-submit-for-verification.md)
   * [7.4 From Developer to ServiceNow Software Architect](module-7-capstone/03-architect-roadmap.md)
   * [7.5 Certifications & Career Roadmap](module-7-capstone/04-certification-and-career.md)
+
+## Reference
+
+* [Cheat Sheet & Quick Reference](reference/cheat-sheet.md)
+* [Glossary](reference/glossary.md)
+* [Debugging Guide](reference/debugging-guide.md)
