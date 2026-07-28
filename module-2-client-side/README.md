@@ -40,6 +40,12 @@ Before moving on, make sure you can answer these:
 You can shape the form experience entirely client-side and know when a declarative UI Policy beats a scripted approach.
 {% endhint %}
 
+## Why this makes you AI-ready
+
+{% hint style="info" %}
+AI reaches for a client script by default — even when a no-code UI Policy is the correct, faster, upgrade-safe answer. It will also write onChange scripts that fire on every keystroke and slow the form to a crawl. This module teaches you to judge *script vs. declarative* and to spot the performance traps, so you can reject generated code that technically works but shouldn't ship.
+{% endhint %}
+
 ## Need help?
 
 Ask your question in the comments of the video for the topic you are stuck on — see [Get Help & Get Verified](../support-and-verification.md).

@@ -40,6 +40,12 @@ Before moving on, make sure you can answer these:
 You can package logic into reusable Script Includes and safely invoke them from the client — the foundation for clean architecture.
 {% endhint %}
 
+## Why this makes you AI-ready
+
+{% hint style="info" %}
+Client-callable Script Includes are one of the most common things AI gets subtly wrong: it adds a custom `initialize()` that breaks `AbstractAjaxProcessor`, forgets that GlideAjax returns strings, or uses the synchronous `getXMLWait()` that freezes the browser. Every one of these runs in a quick test and fails under real load. Building the bridge correctly yourself is what lets you catch these the moment you read the generated code.
+{% endhint %}
+
 ## Need help?
 
 Ask your question in the comments of the video for the topic you are stuck on — see [Get Help & Get Verified](../support-and-verification.md).

@@ -38,6 +38,12 @@ Before moving on, make sure you can answer these:
 You can write platform-safe JavaScript and confidently decide whether any given piece of logic belongs in the browser or on the server.
 {% endhint %}
 
+## Why this makes you AI-ready
+
+{% hint style="info" %}
+Ask an AI for ServiceNow logic and it will happily place a database call inside a client script, or hand you modern JavaScript the platform's server-side engine won't run. Both look fine and both break in production. This module gives you the one mental model — *where does this code run?* — that lets you catch it instantly. Without it, you cannot tell whether generated code is even in the right place.
+{% endhint %}
+
 ## Need help?
 
 Ask your question in the comments of the video for the topic you are stuck on — see [Get Help & Get Verified](../support-and-verification.md).

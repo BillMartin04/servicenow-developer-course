@@ -46,6 +46,12 @@ Before moving on, make sure you can answer these:
 You can architect maintainable, testable, scalable solutions instead of scattering logic across Business Rules.
 {% endhint %}
 
+## Why this makes you AI-ready
+
+{% hint style="info" %}
+This module is the heart of being AI-ready. An AI can only safely *extend* an application whose structure is clean — clear layers, injected dependencies, single responsibilities. Give it a tangle of logic buried in Business Rules and every change it makes risks breaking something else. When you architect with these patterns, you produce the exact kind of codebase an AI can work inside reliably, and you gain the judgment to review the architecture it proposes.
+{% endhint %}
+
 ## Need help?
 
 Ask your question in the comments of the video for the topic you are stuck on — see [Get Help & Get Verified](../support-and-verification.md).

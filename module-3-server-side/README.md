@@ -47,6 +47,12 @@ Before moving on, make sure you can answer these:
 You can read and write platform data reliably, run logic at the right Business Rule stage, and keep queries fast.
 {% endhint %}
 
+## Why this makes you AI-ready
+
+{% hint style="info" %}
+This is where generated code is most dangerous. An AI will write a plain `GlideRecord` query that ignores ACLs and leaks data, put logic in a Business Rule with the wrong `when` timing so it runs at the wrong moment, or query inside a loop and cripple performance — all while looking correct. Knowing GlideRecord, Business Rule timing, and security *by hand* is exactly what lets you review AI output line by line and know it's safe.
+{% endhint %}
+
 ## Need help?
 
 Ask your question in the comments of the video for the topic you are stuck on — see [Get Help & Get Verified](../support-and-verification.md).
