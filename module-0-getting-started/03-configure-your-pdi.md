@@ -10,7 +10,7 @@ By the end of this topic your instance will be configured for real development w
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=Gis8R0Jv3sw" %}
+{% embed url="<https://www.youtube.com/watch?v=Gis8R0Jv3sw>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=Gis8R0Jv3sw)
 

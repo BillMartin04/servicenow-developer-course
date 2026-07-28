@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to query records with addQuery, next, a
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=FAfwLYSrqO0" %}
+{% embed url="<https://www.youtube.com/watch?v=FAfwLYSrqO0>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=FAfwLYSrqO0)
 

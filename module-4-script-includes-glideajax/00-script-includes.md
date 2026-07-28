@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to create reusable server-side classes.
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=yu75ZE_qFUY" %}
+{% embed url="<https://www.youtube.com/watch?v=yu75ZE_qFUY>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=yu75ZE_qFUY)
 

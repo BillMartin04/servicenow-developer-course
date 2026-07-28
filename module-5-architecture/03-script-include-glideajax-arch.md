@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to apply layering and the Repository pa
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=8nYD0R-dYcA" %}
+{% embed url="<https://www.youtube.com/watch?v=8nYD0R-dYcA>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=8nYD0R-dYcA)
 

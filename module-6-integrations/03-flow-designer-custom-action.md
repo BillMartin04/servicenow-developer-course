@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to bridge low-code and pro-code with cu
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=ytJsCv6dzSM" %}
+{% embed url="<https://www.youtube.com/watch?v=ytJsCv6dzSM>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=ytJsCv6dzSM)
 

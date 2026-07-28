@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to pass server data to the client with 
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=W4it_xeKGkI" %}
+{% embed url="<https://www.youtube.com/watch?v=W4it_xeKGkI>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=W4it_xeKGkI)
 

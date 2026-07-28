@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to control catalog variables with scrip
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=u8pg9mXkhug" %}
+{% embed url="<https://www.youtube.com/watch?v=u8pg9mXkhug>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=u8pg9mXkhug)
 

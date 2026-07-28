@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to map the roadmap and skills of a prof
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=fXbSNOMOj7M" %}
+{% embed url="<https://www.youtube.com/watch?v=fXbSNOMOj7M>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=fXbSNOMOj7M)
 

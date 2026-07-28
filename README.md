@@ -2,7 +2,7 @@
 
 Welcome to the **ServiceNow Developer Course** — a free, open-source learning path that takes you from writing your first line of JavaScript to designing production-grade platform architecture, taught by [TechTalk with Bill](https://www.youtube.com/@techtalkwithbill).
 
-{% embed url="https://www.youtube.com/watch?v=fXbSNOMOj7M" %}
+{% embed url="<https://www.youtube.com/watch?v=fXbSNOMOj7M>" %}
 
 ## What this course is
 

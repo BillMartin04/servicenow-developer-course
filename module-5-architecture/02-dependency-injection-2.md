@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to build a simple service container pat
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=wpSaSDFX4Nc" %}
+{% embed url="<https://www.youtube.com/watch?v=wpSaSDFX4Nc>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=wpSaSDFX4Nc)
 

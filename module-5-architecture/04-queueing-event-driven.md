@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to decouple work with events and async 
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=AtuGJLzP9r4" %}
+{% embed url="<https://www.youtube.com/watch?v=AtuGJLzP9r4>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=AtuGJLzP9r4)
 

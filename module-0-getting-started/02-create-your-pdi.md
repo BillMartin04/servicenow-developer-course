@@ -10,7 +10,7 @@ By the end of this topic you will have your own free, running ServiceNow instanc
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=LcR6mRGbrcI" %}
+{% embed url="<https://www.youtube.com/watch?v=LcR6mRGbrcI>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=LcR6mRGbrcI)
 

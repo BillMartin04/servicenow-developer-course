@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to master the four Business Rule timing
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=qjHB5mZrKIk" %}
+{% embed url="<https://www.youtube.com/watch?v=qjHB5mZrKIk>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=qjHB5mZrKIk)
 

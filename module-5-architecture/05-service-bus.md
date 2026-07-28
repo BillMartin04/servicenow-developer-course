@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to design a scalable, reusable integrat
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=qAIB5YR7EYk" %}
+{% embed url="<https://www.youtube.com/watch?v=qAIB5YR7EYk>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=qAIB5YR7EYk)
 

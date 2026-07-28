@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to decouple dependencies with construct
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=ypBiE0X2ATY" %}
+{% embed url="<https://www.youtube.com/watch?v=ypBiE0X2ATY>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=ypBiE0X2ATY)
 

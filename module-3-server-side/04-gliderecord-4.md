@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to optimise queries and avoid performan
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=zMMW_AdWrjI" %}
+{% embed url="<https://www.youtube.com/watch?v=zMMW_AdWrjI>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=zMMW_AdWrjI)
 

@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to override methods and call the parent
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=mDJEyReGg-U" %}
+{% embed url="<https://www.youtube.com/watch?v=mDJEyReGg-U>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=mDJEyReGg-U)
 

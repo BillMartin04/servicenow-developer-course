@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to understand the 'build it right' mind
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=VvmIUhYtTYs" %}
+{% embed url="<https://www.youtube.com/watch?v=VvmIUhYtTYs>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=VvmIUhYtTYs)
 

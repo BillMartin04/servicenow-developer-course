@@ -11,7 +11,7 @@ By the end of this lesson you'll be able to add auth, error handling, and a reus
 
 ## Watch
 
-{% embed url="https://www.youtube.com/watch?v=nU9XaRzyWeA" %}
+{% embed url="<https://www.youtube.com/watch?v=nU9XaRzyWeA>" %}
 
 [Watch on YouTube](https://www.youtube.com/watch?v=nU9XaRzyWeA)
 
