@@ -2,6 +2,7 @@
 
 ## Start Here
 
+* [Welcome](welcome.md)
 * [Course Overview](README.md)
 * [Course Objectives](objectives.md)
 * [Course Syllabus](syllabus.md)
