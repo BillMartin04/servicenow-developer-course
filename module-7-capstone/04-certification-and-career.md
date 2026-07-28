@@ -15,7 +15,7 @@ You've built real skills — now turn them into a career. This lesson maps the S
 ## The certification ladder
 
 {% hint style="warning" %}
-Certification names, exam codes, and requirements change over time and by region. Always confirm the current details on the [ServiceNow Learning / Now Learning portal](https://www.servicenow.com/services/training-and-certification.html) before you register.
+Certification names, exam codes, and requirements change over time and by region. Always confirm the current details on the [ServiceNow University training and certification portal](https://www.servicenow.com/university/training-and-certification.html) before you register.
 {% endhint %}
 
 **Start here**
@@ -75,7 +75,7 @@ Make it concrete this week.
 
 ## Resources
 
-- [ServiceNow Training & Certification](https://www.servicenow.com/services/training-and-certification.html)
+- [ServiceNow University — Training & Certification](https://www.servicenow.com/university/training-and-certification.html)
 - [ServiceNow Community](https://www.servicenow.com/community/)
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
 - [From Developer to ServiceNow Software Architect](03-architect-roadmap.md)
