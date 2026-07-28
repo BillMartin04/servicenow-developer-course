@@ -163,6 +163,8 @@ My fix plan:         ______________________________
 - [Submit your work for verification](02-submit-for-verification.md)
 - Stuck on a criterion? [Ask in the YouTube comments](../support-and-verification.md)
 
----
-<!--NAV-->
+## Continue the course
+
 [← Final Exercise: Build a Production-Ready App](00-final-exercise.md) · [Submit Your Work for Verification →](02-submit-for-verification.md)
+
+Back to: [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg) | [Course home](../README.md) | [Full syllabus](../syllabus.md)
