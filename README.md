@@ -1,6 +1,6 @@
 # Course Overview
 
-Welcome to the **ServiceNow Developer Course** — a free, open-source learning path that takes you from writing your first line of JavaScript to designing production-grade platform architecture, taught by [TechTalk with Bill](https://www.youtube.com/@techtalkwithbill).
+Welcome to the **ServiceNow Developer Course** — a free, open-source learning path that takes you from writing your first line of JavaScript to designing production-grade platform architecture, taught by [TechTalk with Bill](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA).
 
 This course goes beyond development. Its deeper purpose is to make you **AI-ready**: AI can now generate ServiceNow code in seconds, but without solid foundations you cannot tell whether that code is correct, safe, or maintainable. The fundamentals you build here are what let you confidently **direct, review, and trust** AI-assisted development instead of shipping builds that quietly break.
 
@@ -68,6 +68,6 @@ Full details on both are on the [Get Help & Get Verified](support-and-verificati
 
 ---
 
-_Playlist: [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg) · Channel: [TechTalk with Bill](https://www.youtube.com/@techtalkwithbill) · Work with Bill: [ilearntech.co.uk](https://ilearntech.co.uk)_
+_Playlist: [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg) · Channel: [TechTalk with Bill](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA) · Work with Bill: [ilearntech.co.uk](https://ilearntech.co.uk)_
 
 **Next →** [Course Objectives](objectives.md)

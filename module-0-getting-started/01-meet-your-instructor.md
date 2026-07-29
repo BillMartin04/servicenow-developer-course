@@ -40,7 +40,7 @@ Complete these in your Personal Developer Instance (PDI).
 - [ ] Introduce yourself in the YouTube community / comments and say what you want to get out of the course
 - [ ] Set up a note-taking system for the course (a doc, a notebook, or a scoped app record — your choice)
 - [ ] Write one sentence describing what 'build it the right way' means to you
-- [ ] Bookmark the [TechTalk with Bill YouTube channel](https://www.youtube.com/@techtalkwithbill) so you don't miss future lessons
+- [ ] Bookmark the [TechTalk with Bill YouTube channel](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA) so you don't miss future lessons
 
 **Done when:** you've posted an introduction, have a note-taking system ready, and know where to find future lessons.
 
@@ -69,7 +69,7 @@ Have a question or want to share your progress? Post a comment under the video a
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
-- [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- [TechTalk with Bill on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 - Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ## Continue the course

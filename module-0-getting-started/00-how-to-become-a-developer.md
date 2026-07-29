@@ -70,7 +70,7 @@ Have a question or want to share your progress? Post a comment under the video a
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
 - [ServiceNow Product Documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
-- [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- [TechTalk with Bill on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 - Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ## Continue the course

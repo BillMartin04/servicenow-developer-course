@@ -125,14 +125,14 @@ Log it with `gs.info(JSON.stringify(obj))` on the server, or `console.log(JSON.s
 
 Have a question or want to share your progress? Post a comment under the course videos and the instructor will reply.
 
-[Join the discussion on YouTube](https://www.youtube.com/@techtalkwithbill)
+[Join the discussion on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 
 ## Resources
 
 - [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - [ServiceNow Scripting documentation](https://www.servicenow.com/docs/)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
-- [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- [TechTalk with Bill on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 - Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ## Continue the course

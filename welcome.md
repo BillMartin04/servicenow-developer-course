@@ -2,7 +2,7 @@
 
 Welcome — and thank you for being here.
 
-You are about to start the **ServiceNow Developer Course**: a free, open, video-and-code path that takes you from your very first line of JavaScript to designing production-grade, AI-ready ServiceNow applications. It is taught by [TechTalk with Bill](https://www.youtube.com/@techtalkwithbill), and every lesson is built to be *done*, not just watched.
+You are about to start the **ServiceNow Developer Course**: a free, open, video-and-code path that takes you from your very first line of JavaScript to designing production-grade, AI-ready ServiceNow applications. It is taught by [TechTalk with Bill](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA), and every lesson is built to be *done*, not just watched.
 
 ## Watch this first
 
@@ -75,6 +75,6 @@ Let's build it the right way.
 
 ---
 
-_Playlist: [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg) · Channel: [TechTalk with Bill](https://www.youtube.com/@techtalkwithbill) · Work with Bill: [ilearntech.co.uk](https://ilearntech.co.uk)_
+_Playlist: [ServiceNow Developer Course](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg) · Channel: [TechTalk with Bill](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA) · Work with Bill: [ilearntech.co.uk](https://ilearntech.co.uk)_
 
 **Next →** [Course Overview](README.md)

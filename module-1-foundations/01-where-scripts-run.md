@@ -102,14 +102,14 @@ No. Client-side validation is for **user experience** — fast feedback — but 
 
 Have a question or want to share your progress? Post a comment under the course videos and the instructor will reply.
 
-[Join the discussion on YouTube](https://www.youtube.com/@techtalkwithbill)
+[Join the discussion on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 
 ## Resources
 
 - [ServiceNow: Client vs server scripting](https://www.servicenow.com/docs/)
 - [ServiceNow Developer Portal](https://developer.servicenow.com)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
-- [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- [TechTalk with Bill on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 - Stuck? [Ask in the YouTube comments](../support-and-verification.md)
 
 ## Continue the course

@@ -483,7 +483,7 @@ In a scoped application you must use the `sn_ws.` prefix: `new sn_ws.RESTMessage
 
 Have a question or want to share your progress? Post a comment under the course videos and the instructor will reply.
 
-[Join the discussion on YouTube](https://www.youtube.com/@techtalkwithbill)
+[Join the discussion on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 
 ## Resources
 

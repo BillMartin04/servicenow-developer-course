@@ -89,7 +89,7 @@ Push the exported app and your write-up to a public GitHub repository — `servi
 - [Scoring rubric](01-scoring-rubric.md)
 - [Get Help & Get Verified](../support-and-verification.md)
 - [Join Exam Navigator](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA/join)
-- [TechTalk with Bill on YouTube](https://www.youtube.com/@techtalkwithbill)
+- [TechTalk with Bill on YouTube](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA)
 
 ---
 <!--NAV-->
