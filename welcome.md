@@ -4,6 +4,12 @@ Welcome — and thank you for being here.
 
 You are about to start the **ServiceNow Developer Course**: a free, open, video-and-code path that takes you from your very first line of JavaScript to designing production-grade, AI-ready ServiceNow applications. It is taught by [TechTalk with Bill](https://www.youtube.com/@techtalkwithbill), and every lesson is built to be *done*, not just watched.
 
+## Watch this first
+
+{% embed url="https://youtu.be/smXYOHL7NNU" %}
+The Free ServiceNow Developer Course (Zero to AI-Ready Architect) — what's inside, how it works, and why the fundamentals matter more in the age of AI.
+{% endembed %}
+
 {% hint style="info" %}
 **New here? Read this page first, then follow the numbered path at the bottom.** It takes two minutes and will save you hours.
 {% endhint %}
