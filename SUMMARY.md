@@ -6,6 +6,7 @@
 * [Course Overview](README.md)
 * [Course Objectives](objectives.md)
 * [Course Syllabus](syllabus.md)
+* [Join the Community](join-the-community.md)
 * [How to Use This Course](how-to-use.md)
 * [Get Help & Get Verified](support-and-verification.md)
 

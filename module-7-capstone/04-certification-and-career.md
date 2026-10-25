@@ -81,6 +81,7 @@ Make it concrete this week.
 - [From Developer to ServiceNow Software Architect](03-architect-roadmap.md)
 - [Full course playlist](https://www.youtube.com/playlist?list=PLWMzEPW90q1Z9-po9BsvC_rHDf5mtubdg)
 - [Get Help & Get Verified](../support-and-verification.md)
+- [Join the Community](../join-the-community.md)
 
 ---
 <!--NAV-->
