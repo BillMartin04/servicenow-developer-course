@@ -56,6 +56,7 @@ Write platform-safe JavaScript, build client- and server-side behaviour, package
 
 - **Stuck on a lesson?** Ask in the comments on that lesson's YouTube video — that is where Bill answers directly, and where other learners can see the answer too.
 - **Want your final project reviewed and verified?** Join **Exam Navigator** as a channel member: [become a member](https://www.youtube.com/channel/UCMf7pje1x5iZkkEF-Y3PLSA/join). Full details are on the [Get Help & Get Verified](support-and-verification.md) page.
+- **Want to support the course?** [Join the Community](join-the-community.md) on YouTube or send a one time thank you.
 
 ## Your path from here
 
